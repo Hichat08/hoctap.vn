@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Cơ bản - Tin 12</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-home" href="index.html">← 🏠 Trang chính</a>
+      <section class="section" id="js-basics">
+        <div class="section-head">
+          <h2>🔧 JavaScript Cơ bản</h2>
+          <p>
+            JavaScript giúp tạo được tương tác trên trang web. Phần này học
+            những cú pháp cơ bản để bạn có thể làm những hành động đơn giản như
+            lấy dữ liệu từ form, hiển thị/ẩn nội dung, và xử lý sự kiện.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Biến - Variable</h3>
+            <div class="mini-list">
+              <div>
+                <strong>var, let, const:</strong> Dùng để tạo biến lưu trữ dữ
+                liệu.
+              </div>
+              <div><code>let name = "Bạn";</code></div>
+              <div><code>const age = 18;</code></div>
+              <div>
+                <strong>Tip:</strong> Ưu tiên dùng <code>const</code> hoặc
+                <code>let</code> thay vì <code>var</code>.
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Kiểu dữ liệu - Data Types</h3>
+            <div class="mini-list">
+              <div>
+                <strong>String:</strong> <code>let text = "Hello";</code>
+              </div>
+              <div><strong>Number:</strong> <code>let count = 42;</code></div>
+              <div>
+                <strong>Boolean:</strong> <code>let isActive = true;</code>
+              </div>
+              <div>
+                <strong>Array:</strong>
+                <code>let fruits = ["táo", "cam"];</code>
+              </div>
+              <div>
+                <strong>Object:</strong> <code>let user = {name: "Tuấn"};</code>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Toán tử - Operators</h3>
+            <div class="mini-list">
+              <div><strong>Số học:</strong> <code>+ - * / %</code></div>
+              <div>
+                <strong>So sánh:</strong> <code>== === != < > <= >=</code>
+              </div>
+              <div>
+                <strong>Logic:</strong> <code>&& (and) || (or) !(not)</code>
+              </div>
+              <div><strong>Gán:</strong> <code>= += -= *= /=</code></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Điều kiện - If / Else</h3>
+            <div class="mini-list">
+              <div><code>if (age >= 18) { ... }</code></div>
+              <div><code>else if (age >= 15) { ... }</code></div>
+              <div><code>else { ... }</code></div>
+              <div>
+                <strong>Ternary:</strong> <code>condition ? "yes" : "no"</code>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Vòng lặp - Loops</h3>
+            <div class="mini-list">
+              <div>
+                <strong>For:</strong>
+                <code>for (let i = 0; i < 5; i++) { }</code>
+              </div>
+              <div><strong>While:</strong> <code>while (x < 10) { }</code></div>
+              <div>
+                <strong>Do-while:</strong> <code>do { } while (x < 10)</code>
+              </div>
+              <div>
+                <strong>For...of:</strong>
+                <code>for (let fruit of fruits) { }</code>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Hàm - Functions</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Khai báo:</strong> <code>function greet(name) { }</code>
+              </div>
+              <div>
+                <strong>Arrow:</strong>
+                <code>const add = (a, b) => a + b;</code>
+              </div>
+              <div><strong>Return:</strong> Trả về kết quả từ hàm</div>
+              <div><code>function sum(a, b) { return a + b; }</code></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Công dụng</th>
+                <th>Cú pháp</th>
+                <th>Ví dụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lấy phần tử HTML</td>
+                <td><code>document.getElementById()</code></td>
+                <td><code>let el = document.getElementById("demo");</code></td>
+              </tr>
+              <tr>
+                <td>Đổi nội dung</td>
+                <td><code>element.textContent = "..."</code></td>
+                <td><code>el.textContent = "Nội dung mới";</code></td>
+              </tr>
+              <tr>
+                <td>Đổi HTML</td>
+                <td><code>element.innerHTML = "..."</code></td>
+                <td><code>el.innerHTML = "&lt;b&gt;Bold&lt;/b&gt;";</code></td>
+              </tr>
+              <tr>
+                <td>Gắn sự kiện</td>
+                <td><code>element.addEventListener()</code></td>
+                <td>
+                  <code>btn.addEventListener("click", function() { });</code>
+                </td>
+              </tr>
+              <tr>
+                <td>Thay đổi kiểu CSS</td>
+                <td><code>element.style.property = "value"</code></td>
+                <td><code>el.style.color = "red";</code></td>
+              </tr>
+              <tr>
+                <td>In ra console</td>
+                <td><code>console.log()</code></td>
+                <td><code>console.log("Debug:", value);</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Sự kiện - Events</th>
+                <th>Khi nào xảy ra</th>
+                <th>Ví dụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>click</code></td>
+                <td>Khi người dùng click chuột</td>
+                <td><code>button.addEventListener("click", handler);</code></td>
+              </tr>
+              <tr>
+                <td><code>input</code></td>
+                <td>Khi người dùng gõ vào input</td>
+                <td><code>input.addEventListener("input", handler);</code></td>
+              </tr>
+              <tr>
+                <td><code>change</code></td>
+                <td>Khi giá trị thay đổi</td>
+                <td>
+                  <code>select.addEventListener("change", handler);</code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>submit</code></td>
+                <td>Khi submit form</td>
+                <td><code>form.addEventListener("submit", handler);</code></td>
+              </tr>
+              <tr>
+                <td><code>mouseover</code></td>
+                <td>Khi chuột di vào phần tử</td>
+                <td><code>el.addEventListener("mouseover", handler);</code></td>
+              </tr>
+              <tr>
+                <td><code>focus</code></td>
+                <td>Khi input được focus</td>
+                <td><code>input.addEventListener("focus", handler);</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="footer">
+        Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
+        ôn tập bất cứ lúc nào.
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

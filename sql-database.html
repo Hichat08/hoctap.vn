@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL & Cơ sở dữ liệu - Tin 12</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-home" href="index.html">← 🏠 Trang chính</a>
+      <section class="section" id="sql-db">
+        <div class="section-head">
+          <h2>💾 SQL & Cơ sở dữ liệu</h2>
+          <p>
+            SQL là ngôn ngữ dùng để truy vấn và quản lý dữ liệu trong cơ sở dữ
+            liệu. Phần này học cú pháp cơ bản như SELECT, INSERT, UPDATE, DELETE
+            để bạn có thể làm việc với dữ liệu có tổ chức.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Cơ sở dữ liệu - Database</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Bảng (Table):</strong> Chứa hàng (rows) và cột (columns)
+              </div>
+              <div><strong>Bản ghi (Record):</strong> Một hàng dữ liệu</div>
+              <div><strong>Trường (Field):</strong> Một cột có tên riêng</div>
+              <div>
+                <strong>Khóa chính (Primary Key):</strong> Giá trị duy nhất để
+                nhận dạng bản ghi
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>SELECT - Lấy dữ liệu</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Lấy toàn bộ:</strong> <code>SELECT * FROM users;</code>
+              </div>
+              <div>
+                <strong>Lấy cột cụ thể:</strong>
+                <code>SELECT name, age FROM users;</code>
+              </div>
+              <div>
+                <strong>Có điều kiện:</strong>
+                <code>SELECT * FROM users WHERE age > 18;</code>
+              </div>
+              <div>
+                <strong>Sắp xếp:</strong> <code>ORDER BY age DESC;</code>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>INSERT - Thêm dữ liệu</h3>
+            <div class="mini-list">
+              <div>
+                <code>INSERT INTO users (name, age) VALUES ('Tuấn', 18);</code>
+              </div>
+              <div><code>INSERT INTO users VALUES (1, 'Hoa', 17);</code></div>
+              <div>
+                <strong>Tip:</strong> Khi có khóa tự tăng, có thể bỏ qua ID
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>UPDATE - Sửa dữ liệu</h3>
+            <div class="mini-list">
+              <div>
+                <code>UPDATE users SET age = 19 WHERE name = 'Tuấn';</code>
+              </div>
+              <div><code>UPDATE users SET age = age + 1;</code></div>
+              <div>
+                <strong>Cảnh báo:</strong> Luôn có WHERE để tránh sửa toàn bộ
+                bảng!
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>DELETE - Xóa dữ liệu</h3>
+            <div class="mini-list">
+              <div><code>DELETE FROM users WHERE id = 5;</code></div>
+              <div><code>DELETE FROM users WHERE age < 15;</code></div>
+              <div>
+                <strong>Cảnh báo:</strong> Luôn có WHERE, nếu không sẽ xóa toàn
+                bộ!
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>WHERE - Điều kiện tìm kiếm</h3>
+            <div class="mini-list">
+              <div><strong>So sánh:</strong> <code>= != < > <= >=</code></div>
+              <div><strong>Logic:</strong> <code>AND, OR, NOT</code></div>
+              <div>
+                <strong>Ví dụ:</strong>
+                <code>WHERE age > 15 AND city = 'Hà Nội'</code>
+              </div>
+              <div>
+                <strong>LIKE:</strong> <code>WHERE name LIKE 'T%'</code> (tìm
+                tên bắt đầu T)
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Lệnh</th>
+                <th>Ý nghĩa</th>
+                <th>Ví dụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>DISTINCT</code></td>
+                <td>Lấy giá trị duy nhất, không trùng lặp</td>
+                <td><code>SELECT DISTINCT city FROM users;</code></td>
+              </tr>
+              <tr>
+                <td><code>COUNT()</code></td>
+                <td>Đếm số bản ghi</td>
+                <td><code>SELECT COUNT(*) FROM users;</code></td>
+              </tr>
+              <tr>
+                <td><code>SUM()</code></td>
+                <td>Tính tổng cộng</td>
+                <td><code>SELECT SUM(amount) FROM orders;</code></td>
+              </tr>
+              <tr>
+                <td><code>AVG()</code></td>
+                <td>Tính trung bình</td>
+                <td><code>SELECT AVG(price) FROM products;</code></td>
+              </tr>
+              <tr>
+                <td><code>MAX() / MIN()</code></td>
+                <td>Giá trị lớn / nhỏ nhất</td>
+                <td><code>SELECT MAX(age) FROM users;</code></td>
+              </tr>
+              <tr>
+                <td><code>GROUP BY</code></td>
+                <td>Nhóm kết quả theo trường</td>
+                <td>
+                  <code>SELECT city, COUNT(*) FROM users GROUP BY city;</code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>ORDER BY</code></td>
+                <td>Sắp xếp kết quả</td>
+                <td><code>ORDER BY age ASC;</code> (từ nhỏ đến lớn)</td>
+              </tr>
+              <tr>
+                <td><code>LIMIT</code></td>
+                <td>Giới hạn số kết quả trả về</td>
+                <td><code>SELECT * FROM users LIMIT 5;</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Bảng ví dụ: users</th>
+                <th>Cột</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>id (Primary Key)</td>
+                <td>1, 2, 3, 4, 5</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td>Tuấn, Hoa, Minh, Lan, Hùng</td>
+              </tr>
+              <tr>
+                <td>age</td>
+                <td>18, 17, 19, 16, 18</td>
+              </tr>
+              <tr>
+                <td>city</td>
+                <td>Hà Nội, TP.HCM, Đà Nẵng, Hà Nội, TP.HCM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Ví dụ thực tế</h3>
+            <div class="mini-list">
+              <div><strong>Q1:</strong> Lấy tất cả user có tuổi ≥ 18?</div>
+              <div><code>SELECT * FROM users WHERE age >= 18;</code></div>
+              <div><strong>Q2:</strong> Đếm có bao nhiêu user ở Hà Nội?</div>
+              <div>
+                <code>SELECT COUNT(*) FROM users WHERE city = 'Hà Nội';</code>
+              </div>
+              <div><strong>Q3:</strong> Thêm user mới?</div>
+              <div>
+                <code
+                  >INSERT INTO users (name, age, city) VALUES ('Kiên', 20, 'Hải
+                  Phòng');</code
+                >
+              </div>
+              <div><strong>Q4:</strong> Thay đổi tuổi của Tuấn?</div>
+              <div>
+                <code>UPDATE users SET age = 19 WHERE name = 'Tuấn';</code>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <p class="footer">
+        Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
+        ôn tập bất cứ lúc nào.
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

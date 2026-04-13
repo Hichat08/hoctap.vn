@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Nâng cao - Tin 12</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-home" href="index.html">← 🏠 Trang chính</a>
+      <section class="section" id="css-advanced">
+        <div class="section-head">
+          <h2>🎨 CSS Nâng cao</h2>
+          <p>
+            CSS không chỉ là màu và kích cỡ. Phần này học cách bố trí linh hoạt
+            (Flexbox, Grid), làm đẹp với hiệu ứng, và tối ưu cho điện thoại
+            (responsive).
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Selectors - Bộ chọn</h3>
+            <div class="mini-list">
+              <div><strong>ID:</strong> <code>#myid { }</code></div>
+              <div><strong>Class:</strong> <code>.myclass { }</code></div>
+              <div><strong>Thẻ:</strong> <code>p { }</code></div>
+              <div><strong>Ghép:</strong> <code>div.header { }</code></div>
+              <div>
+                <strong>Bao:</strong> <code>div p { }</code> (p con của div)
+              </div>
+              <div>
+                <strong>Con trực tiếp:</strong> <code>div > p { }</code>
+              </div>
+              <div>
+                <strong>Bên cạnh:</strong> <code>h1 + p { }</code> (p ngay sau
+                h1)
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Pseudo-classes</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Hover:</strong> <code>a:hover { }</code> (khi rê chuột)
+              </div>
+              <div>
+                <strong>Active:</strong> <code>a:active { }</code> (khi click)
+              </div>
+              <div>
+                <strong>Focus:</strong> <code>input:focus { }</code> (khi được
+                chọn)
+              </div>
+              <div>
+                <strong>First child:</strong> <code>p:first-child { }</code>
+              </div>
+              <div>
+                <strong>Nth child:</strong> <code>li:nth-child(2n) { }</code>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Flexbox - Bố trí dòng/cột</h3>
+            <div class="mini-list">
+              <div><strong>Bước 1:</strong> <code>display: flex;</code></div>
+              <div>
+                <strong>Chiều:</strong>
+                <code>flex-direction: row | column;</code>
+              </div>
+              <div>
+                <strong>Căn lề trục chính:</strong>
+                <code>justify-content: center;</code>
+              </div>
+              <div>
+                <strong>Căn lề trục phụ:</strong>
+                <code>align-items: center;</code>
+              </div>
+              <div><strong>Khoảng cách:</strong> <code>gap: 10px;</code></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Grid - Bố trí lưới</h3>
+            <div class="mini-list">
+              <div><strong>Bước 1:</strong> <code>display: grid;</code></div>
+              <div>
+                <strong>Cột:</strong>
+                <code>grid-template-columns: 1fr 1fr 1fr;</code>
+              </div>
+              <div>
+                <strong>Hàng:</strong>
+                <code>grid-template-rows: 100px 200px;</code>
+              </div>
+              <div>
+                <strong>Lặp:</strong> <code>repeat(3, 1fr)</code> = 3 cục bằng
+                nhau
+              </div>
+              <div><strong>Khoảng:</strong> <code>gap: 15px;</code></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Transform & Transition</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Dịch:</strong> <code>transform: translateX(10px);</code>
+              </div>
+              <div>
+                <strong>Quay:</strong> <code>transform: rotate(45deg);</code>
+              </div>
+              <div>
+                <strong>Phóng to:</strong> <code>transform: scale(1.2);</code>
+              </div>
+              <div>
+                <strong>Chuyển động:</strong>
+                <code>transition: all 0.3s ease;</code>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Hiệu ứng & Độ trong suốt</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Bóng:</strong>
+                <code>box-shadow: 0 4px 8px rgba(0,0,0,0.2);</code>
+              </div>
+              <div>
+                <strong>Bóng chữ:</strong>
+                <code>text-shadow: 2px 2px 4px gray;</code>
+              </div>
+              <div>
+                <strong>Opacity:</strong> <code>opacity: 0.5;</code> (50% trong
+                suốt)
+              </div>
+              <div>
+                <strong>Z-index:</strong> <code>z-index: 10;</code> (thứ tự xếp
+                chồng)
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Tính năng</th>
+                <th>Cú pháp</th>
+                <th>Ý nghĩa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Animation</td>
+                <td><code>animation: slide 1s infinite;</code></td>
+                <td>Chạy hiệu ứng @keyframes lặp vô hạn</td>
+              </tr>
+              <tr>
+                <td>Gradient</td>
+                <td>
+                  <code>background: linear-gradient(to right, red, blue);</code>
+                </td>
+                <td>Tạo nền chuyển màu</td>
+              </tr>
+              <tr>
+                <td>Filter</td>
+                <td><code>filter: blur(5px);</code></td>
+                <td>Làm mờ hình ảnh</td>
+              </tr>
+              <tr>
+                <td>Clip-path</td>
+                <td><code>clip-path: circle(50%);</code></td>
+                <td>Cắt phần tử thành hình</td>
+              </tr>
+              <tr>
+                <td>Visibility</td>
+                <td><code>visibility: hidden;</code></td>
+                <td>Ẩn nhưng vẫn chiếm không gian</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Responsive - Thích ứng điện thoại</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Media query:</strong>
+                <code>@media (max-width: 600px) { }</code>
+              </div>
+              <div>
+                <strong>Mobile first:</strong> Viết CSS cho điện thoại trước
+              </div>
+              <div>
+                <strong>Breakpoints thường:</strong> 480px, 600px, 768px, 1024px
+              </div>
+              <div>
+                <code
+                  >@media (max-width: 600px) { .grid { grid-template-columns:
+                  1fr; } }</code
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Units - Đơn vị CSS</h3>
+            <div class="mini-list">
+              <div><strong>px (pixel):</strong> Cố định, 1px = 1 điểm ảnh</div>
+              <div><strong>em:</strong> Tương đối với font-size cha</div>
+              <div><strong>rem:</strong> Tương đối với font-size gốc</div>
+              <div><strong>% (phần trăm):</strong> Tương đối với cha</div>
+              <div><strong>vw, vh:</strong> Tương đối với màn hình</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ví dụ Flexbox</th>
+                <th>Kết quả</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>
+                    .container {<br />
+                    &nbsp;&nbsp;display: flex;<br />
+                    &nbsp;&nbsp;justify-content: center;<br />
+                    &nbsp;&nbsp;align-items: center;<br />
+                    &nbsp;&nbsp;height: 100vh;<br />
+                    }
+                  </code>
+                </td>
+                <td>Xếp phần tử vào giữa màn hình (cả x và y)</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    .box {<br />
+                    &nbsp;&nbsp;flex: 1;<br />
+                    }
+                  </code>
+                </td>
+                <td>Box mở rộng bằng nhau, chia đều không gian</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    .container {<br />
+                    &nbsp;&nbsp;display: flex;<br />
+                    &nbsp;&nbsp;gap: 15px;<br />
+                    }
+                  </code>
+                </td>
+                <td>Khoảng cách 15px giữa các item</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="footer">
+        Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
+        ôn tập bất cứ lúc nào.
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

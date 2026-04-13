@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Nâng cao - Tin 12</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-home" href="index.html">← 🏠 Trang chính</a>
+      <section class="section" id="html-advanced">
+        <div class="section-head">
+          <h2>📄 HTML Nâng cao & Semantic Tags</h2>
+          <p>
+            Bên cạnh các thẻ cơ bản, HTML5 cung cấp thẻ "ngữ nghĩa" (semantic)
+            giúp code dễ hiểu hơn và tốt hơn cho SEO. Phần này tìm hiểu thêm
+            những thẻ quan trọng.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Semantic Tags - Thẻ ngữ nghĩa</h3>
+            <div class="mini-list">
+              <div><strong>header:</strong> Phần tiêu đề của trang</div>
+              <div><strong>nav:</strong> Thanh điều hướng</div>
+              <div><strong>main:</strong> Nội dung chính của trang</div>
+              <div><strong>article:</strong> Bài viết độc lập</div>
+              <div><strong>section:</strong> Một phần nội dung</div>
+              <div><strong>aside:</strong> Thanh bên (sidebar)</div>
+              <div><strong>footer:</strong> Phần chân trang</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>div & span - Generic containers</h3>
+            <div class="mini-list">
+              <div>
+                <strong>div:</strong> Khối (block) không có ý nghĩa riêng
+              </div>
+              <div>
+                <strong>span:</strong> Dòng (inline) không có ý nghĩa riêng
+              </div>
+              <div><code>&lt;div class="container"&gt;&lt;/div&gt;</code></div>
+              <div>
+                <code>&lt;span class="highlight"&gt;Text&lt;/span&gt;</code>
+              </div>
+              <div>
+                <strong>Dùng khi:</strong> Cần wrap nội dung để CSS hoặc JS
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Form - Nhập liệu chi tiết</h3>
+            <div class="mini-list">
+              <div><strong>fieldset:</strong> Nhóm các input liên quan</div>
+              <div><strong>legend:</strong> Tiêu đề của fieldset</div>
+              <div>
+                <strong>label:</strong> Nhãn cho input, click vào để focus
+              </div>
+              <div><code>&lt;label for="name"&gt;Tên:&lt;/label&gt;</code></div>
+              <div><code>&lt;input id="name" type="text"&gt;</code></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Input types - Các kiểu nhập</h3>
+            <div class="mini-list">
+              <div><code>type="text"</code> - Dòng chữ thường</div>
+              <div><code>type="email"</code> - Kiểm tra email</div>
+              <div><code>type="number"</code> - Chỉ số</div>
+              <div><code>type="date"</code> - Chọn ngày</div>
+              <div><code>type="checkbox"</code> - Hộp kiểm (chọn nhiều)</div>
+              <div><code>type="radio"</code> - Nút tròn (chọn 1)</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Table - Bảng dữ liệu</h3>
+            <div class="mini-list">
+              <div><strong>table:</strong> Thẻ gốc</div>
+              <div><strong>thead:</strong> Phần đầu (header row)</div>
+              <div><strong>tbody:</strong> Phần thân (data rows)</div>
+              <div><strong>tfoot:</strong> Phần cuối (summary row)</div>
+              <div><strong>caption:</strong> Tiêu đề bảng</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Meta tags - Thông tin trang</h3>
+            <div class="mini-list">
+              <div><code>&lt;meta charset="UTF-8"&gt;</code> - Mã ký tự</div>
+              <div>
+                <code
+                  >&lt;meta name="viewport"
+                  content="width=device-width"&gt;</code
+                >
+                - Mobile
+              </div>
+              <div>
+                <code>&lt;meta name="description" content="..."&gt;</code> - Mô
+                tả SEO
+              </div>
+              <div>
+                <code>&lt;meta name="keywords" content="..."&gt;</code> - Từ
+                khóa
+              </div>
+              <div>
+                <code>&lt;meta name="author" content="..."&gt;</code> - Tác giả
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Thẻ</th>
+                <th>Loại</th>
+                <th>Ví dụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>&lt;header&gt;</code></td>
+                <td>Block - Semantic</td>
+                <td>
+                  <code
+                    >&lt;header&gt;&lt;h1&gt;Trang
+                    web&lt;/h1&gt;&lt;/header&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><code>&lt;nav&gt;</code></td>
+                <td>Block - Semantic</td>
+                <td>
+                  <code
+                    >&lt;nav&gt;&lt;a
+                    href="..."&gt;Menu&lt;/a&gt;&lt;/nav&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><code>&lt;main&gt;</code></td>
+                <td>Block - Semantic</td>
+                <td>
+                  <code
+                    >&lt;main&gt;&lt;article&gt;...&lt;/article&gt;&lt;/main&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><code>&lt;article&gt;</code></td>
+                <td>Block - Semantic</td>
+                <td>
+                  <code
+                    >&lt;article&gt;&lt;h2&gt;Bài
+                    viết&lt;/h2&gt;&lt;p&gt;...&lt;/p&gt;&lt;/article&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><code>&lt;section&gt;</code></td>
+                <td>Block - Semantic</td>
+                <td>
+                  <code
+                    >&lt;section&gt;&lt;h2&gt;Chủ
+                    đề&lt;/h2&gt;&lt;p&gt;...&lt;/p&gt;&lt;/section&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><code>&lt;aside&gt;</code></td>
+                <td>Block - Semantic</td>
+                <td>
+                  <code
+                    >&lt;aside&gt;&lt;h3&gt;Bên
+                    lề&lt;/h3&gt;&lt;/aside&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><code>&lt;footer&gt;</code></td>
+                <td>Block - Semantic</td>
+                <td>
+                  <code
+                    >&lt;footer&gt;&lt;p&gt;©
+                    2024&lt;/p&gt;&lt;/footer&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><code>&lt;div&gt;</code></td>
+                <td>Block - Generic</td>
+                <td><code>&lt;div class="wrapper"&gt;...&lt;/div&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>&lt;span&gt;</code></td>
+                <td>Inline - Generic</td>
+                <td>
+                  <code
+                    >Đây là &lt;span
+                    class="error"&gt;lỗi&lt;/span&gt;.&lt;/code&gt;</code
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Cấu trúc trang web chuẩn</th>
+                <th>Mô tả</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>
+                    &lt;header&gt;...&lt;/header&gt;<br />
+                    &lt;nav&gt;...&lt;/nav&gt;<br />
+                    &lt;main&gt;<br />
+                    &nbsp;&nbsp;&lt;article&gt;...&lt;/article&gt;<br />
+                    &lt;/main&gt;<br />
+                    &lt;aside&gt;...&lt;/aside&gt;<br />
+                    &lt;footer&gt;...&lt;/footer&gt;
+                  </code>
+                </td>
+                <td>Cấu trúc HTML5 chuẩn và dễ hiểu</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Block vs Inline</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Block:</strong> Chiếm toàn bộ chiều rộng, xuống hàng mới
+              </div>
+              <div><strong>Ví dụ:</strong> div, p, h1-h6, section, header</div>
+              <div><strong>Inline:</strong> Chiếm vừa đủ, không xuống hàng</div>
+              <div><strong>Ví dụ:</strong> span, a, strong, em, img</div>
+              <div>
+                <strong>Inline-block:</strong> Vừa inline, vừa có height/width
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Attribute - Thuộc tính cần nhớ</h3>
+            <div class="mini-list">
+              <div><strong>id:</strong> Định danh duy nhất cho phần tử</div>
+              <div><strong>class:</strong> Nhóm nhiều phần tử cùng CSS</div>
+              <div><strong>data-*:</strong> Lưu dữ liệu tùy chỉnh</div>
+              <div>
+                <code
+                  >&lt;div data-id="123" data-name="Tuấn"&gt;&lt;/div&gt;</code
+                >
+              </div>
+              <div><strong>title:</strong> Tooltip khi rê chuột</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <p class="footer">
+        Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
+        ôn tập bất cứ lúc nào.
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
