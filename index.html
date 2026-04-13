@@ -150,6 +150,7 @@
         width: 100%;
         border-collapse: collapse;
         min-width: 760px;
+        table-layout: auto;
       }
 
       th,
@@ -479,14 +480,47 @@
           padding-right: 14px;
         }
 
+        .section {
+          border-radius: 18px;
+        }
+
+        .hero,
+        .section {
+          padding-bottom: 0;
+        }
+
+        .quick-links {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .quick-links a {
+          padding: 10px 14px;
+          font-size: 14px;
+          width: 100%;
+          text-align: center;
+        }
+
         th,
         td {
           padding: 10px 8px;
           font-size: 13px;
         }
 
+        .table-wrap {
+          padding-bottom: 16px;
+        }
+
+        .table-wrap table {
+          min-width: 0;
+        }
+
         .example {
           font-size: 12px;
+        }
+
+        code {
+          font-size: 13px;
         }
 
         .example-output {
@@ -505,13 +539,12 @@
           padding: 8px 10px;
         }
 
-        .card h3 {
-          font-size: 16px;
+        .card {
+          padding: 14px;
         }
 
-        .quick-links a {
-          padding: 10px 16px;
-          font-size: 14px;
+        .card h3 {
+          font-size: 16px;
         }
 
         .badge {
