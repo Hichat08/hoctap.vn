@@ -96,39 +96,49 @@ h3 {
 .quick-links a {
   padding: 11px 18px;
   border-radius: 999px;
-  background: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #faf6ee 100%);
   border: 1px solid var(--line);
   color: var(--ink);
   font-weight: 700;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.06);
   transition:
-    transform 0.18s ease,
-    border-color 0.18s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .quick-links a:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.14);
+  background: linear-gradient(135deg, var(--primary-soft) 0%, #ffffff 100%);
 }
 .back-home {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 18px;
-  padding: 10px 16px;
+  padding: 11px 18px;
   border-radius: 999px;
-  background: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #faf6ee 100%);
   border: 1px solid rgba(15, 118, 110, 0.14);
   color: var(--ink);
   font-weight: 700;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.08);
   transition:
-    transform 0.18s ease,
-    border-color 0.18s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 .back-home:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   border-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.15);
+  background: linear-gradient(135deg, var(--primary-soft) 0%, #ffffff 100%);
 }
 
 .section {
@@ -423,11 +433,39 @@ code {
   border: 1px solid var(--line);
   border-radius: 18px;
   background: linear-gradient(180deg, #fffdf8 0%, #faf6ee 100%);
+  box-shadow: 0 2px 8px rgba(15, 118, 110, 0.04);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(15, 118, 110, 0.08);
+  transform: translateY(-2px);
 }
 
 .card h3 {
   font-size: 18px;
   margin-bottom: 12px;
+}
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.card a:hover {
+  transform: translateX(2px);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.12);
 }
 
 .mini-list {
@@ -440,11 +478,36 @@ code {
   border-radius: 12px;
   background: #ffffff;
   border: 1px solid #ece3d6;
+  transition: all 0.2s ease;
+}
+
+.mini-list div:hover {
+  border-color: var(--primary);
+  background: rgba(15, 118, 110, 0.02);
 }
 
 .mini-list strong {
   display: block;
   margin-bottom: 6px;
+}
+
+.mini-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.mini-list a:hover {
+  transform: translateX(1px);
+  box-shadow: 0 3px 10px rgba(15, 118, 110, 0.15);
 }
 
 .swatches {
@@ -536,10 +599,11 @@ code {
   .quick-links {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
   }
 
   .quick-links a {
-    padding: 10px 14px;
+    padding: 12px 14px;
     font-size: 14px;
     width: 100%;
     text-align: center;
@@ -585,10 +649,21 @@ code {
 
   .card {
     padding: 14px;
+    box-shadow: 0 1px 4px rgba(15, 118, 110, 0.02);
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.06);
+    transform: translateY(-1px);
   }
 
   .card h3 {
     font-size: 16px;
+  }
+
+  .card a {
+    padding: 7px 10px;
+    font-size: 13px;
   }
 
   .badge {
