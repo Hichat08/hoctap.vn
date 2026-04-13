@@ -1,0 +1,1554 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài ghi nhớ Tin 12</title>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --paper: #fffdf8;
+        --ink: #202124;
+        --muted: #5f6368;
+        --line: #e6dccd;
+        --primary: #0f766e;
+        --primary-soft: #d8f3ef;
+        --accent: #f59e0b;
+        --shadow: 0 18px 40px rgba(32, 33, 36, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(245, 158, 11, 0.18),
+            transparent 22%
+          ),
+          linear-gradient(180deg, #f7f2e8 0%, #f4efe6 100%);
+      }
+
+      .page {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 48px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #fffdf8 0%, #f6fbfa 100%);
+        border: 1px solid rgba(15, 118, 110, 0.14);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 32px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      .hero h1 {
+        margin-top: 14px;
+        font-size: clamp(30px, 5vw, 54px);
+        line-height: 1.08;
+      }
+
+      .hero p {
+        margin: 16px 0 0;
+        max-width: 820px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .note {
+        margin-top: 18px;
+        padding: 14px 16px;
+        border-left: 4px solid var(--accent);
+        border-radius: 14px;
+        background: rgba(245, 158, 11, 0.1);
+        color: #6b4f0f;
+      }
+
+      .quick-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .quick-links a {
+        padding: 11px 18px;
+        border-radius: 999px;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        color: var(--ink);
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          transform 0.18s ease,
+          border-color 0.18s ease;
+      }
+
+      .quick-links a:hover {
+        transform: translateY(-2px);
+        border-color: var(--primary);
+      }
+
+      .section {
+        margin-top: 28px;
+        background: var(--paper);
+        border: 1px solid rgba(95, 99, 104, 0.12);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .section-head {
+        padding: 22px 24px 14px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(24px, 3vw, 32px);
+      }
+
+      .section-head p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        padding: 0 18px 18px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 760px;
+        table-layout: auto;
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid var(--line);
+      }
+
+      th {
+        background: #f8f4ec;
+        color: #3f454b;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      tr:hover td {
+        background: rgba(15, 118, 110, 0.03);
+      }
+
+      code {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 8px;
+        background: #f1f6f5;
+        color: #0f4f4a;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 14px;
+        word-break: break-word;
+      }
+
+      .example {
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        color: var(--ink);
+      }
+
+      .example-block {
+        display: grid;
+        gap: 8px;
+      }
+
+      .example-output {
+        display: inline-block;
+        max-width: 100%;
+        padding: 8px 10px;
+        border: 1px dashed rgba(15, 118, 110, 0.26);
+        border-radius: 12px;
+        background: #ffffff;
+      }
+
+      .example-note {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .example hr {
+        display: inline-block;
+        width: 50px;
+        height: 1px;
+        background: var(--ink);
+        margin: 0 5px;
+      }
+
+      .demo-heading {
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .demo-divider {
+        width: 110px;
+        margin: 0;
+        border: 0;
+        border-top: 2px solid #94a3b8;
+      }
+
+      .demo-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 30px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: #eef7f6;
+        border: 1px solid rgba(15, 118, 110, 0.18);
+        color: #0f4f4a;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .demo-image {
+        position: relative;
+        display: inline-block;
+        width: 112px;
+        height: 66px;
+        border-radius: 12px;
+        overflow: hidden;
+        background: linear-gradient(180deg, #bae6fd 0%, #d1fae5 100%);
+      }
+
+      .demo-image::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: 0;
+        width: 70px;
+        height: 32px;
+        background: #0f766e;
+        clip-path: polygon(0 100%, 28% 38%, 58% 72%, 100% 0, 100% 100%);
+      }
+
+      .demo-image::after {
+        content: "IMG";
+        position: absolute;
+        top: 9px;
+        right: 10px;
+        color: #0f766e;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .demo-frame {
+        min-width: 132px;
+        min-height: 74px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #cbd5e1;
+        border-radius: 12px;
+        background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+        color: #334155;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .demo-form {
+        display: grid;
+        gap: 6px;
+        max-width: 220px;
+      }
+
+      .demo-form input,
+      .demo-form textarea,
+      .demo-form select {
+        width: 100%;
+        padding: 7px 9px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        background: #ffffff;
+        font: inherit;
+        font-size: 13px;
+      }
+
+      .demo-form textarea {
+        min-height: 58px;
+        resize: vertical;
+      }
+
+      .demo-form button {
+        width: fit-content;
+        padding: 7px 12px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--primary);
+        color: #ffffff;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .demo-input-output {
+        font-size: 12px;
+        color: #0f766e;
+      }
+
+      .demo-list {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .demo-list li + li {
+        margin-top: 4px;
+      }
+
+      .demo-table {
+        width: auto;
+        min-width: 0;
+        border-collapse: collapse;
+      }
+
+      .demo-table th,
+      .demo-table td {
+        padding: 6px 8px;
+        border: 1px solid #d9e4e1;
+        background: #ffffff;
+        font-size: 12px;
+      }
+
+      .demo-table tr:hover td {
+        background: #ffffff;
+      }
+
+      .demo-quote {
+        margin: 0;
+        padding-left: 12px;
+        border-left: 3px solid var(--accent);
+        color: var(--muted);
+        font-style: italic;
+      }
+
+      .demo-pre {
+        margin: 0;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 12px;
+        line-height: 1.5;
+        white-space: pre;
+      }
+
+      .demo-kbd {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .demo-kbd kbd {
+        padding: 4px 7px;
+        border-radius: 7px;
+        border: 1px solid #cbd5e1;
+        background: #f8fafc;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 12px;
+        box-shadow: inset 0 -1px 0 rgba(148, 163, 184, 0.28);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+        padding: 0 18px 18px;
+      }
+
+      .card {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: linear-gradient(180deg, #fffdf8 0%, #faf6ee 100%);
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+
+      .mini-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .mini-list div {
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: #ffffff;
+        border: 1px solid #ece3d6;
+      }
+
+      .mini-list strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 14px;
+        padding: 0 18px 22px;
+      }
+
+      .swatch {
+        padding: 14px;
+        border-radius: 18px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+      }
+
+      .swatch strong,
+      .swatch span {
+        display: block;
+      }
+
+      .swatch span {
+        margin-top: 6px;
+        font-size: 14px;
+      }
+
+      .footer {
+        margin-top: 28px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(100% - 20px, 1180px);
+          padding-top: 16px;
+        }
+
+        .hero,
+        .section-head,
+        .table-wrap,
+        .grid,
+        .swatches {
+          padding-left: 14px;
+          padding-right: 14px;
+        }
+
+        .section {
+          border-radius: 18px;
+        }
+
+        .hero,
+        .section {
+          padding-bottom: 0;
+        }
+
+        .quick-links {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .quick-links a {
+          padding: 10px 14px;
+          font-size: 14px;
+          width: 100%;
+          text-align: center;
+        }
+
+        th,
+        td {
+          padding: 10px 8px;
+          font-size: 13px;
+        }
+
+        .table-wrap {
+          padding-bottom: 16px;
+        }
+
+        .table-wrap table {
+          min-width: 0;
+        }
+
+        .example {
+          font-size: 12px;
+        }
+
+        code {
+          font-size: 13px;
+        }
+
+        .example-output {
+          padding: 7px 8px;
+        }
+
+        .demo-form {
+          max-width: 100%;
+        }
+
+        .demo-frame {
+          min-width: 104px;
+        }
+
+        .mini-list div {
+          padding: 8px 10px;
+        }
+
+        .card {
+          padding: 14px;
+        }
+
+        .card h3 {
+          font-size: 16px;
+        }
+
+        .badge {
+          font-size: 12px;
+        }
+
+        .hero h1 {
+          font-size: clamp(24px, 6vw, 40px);
+        }
+
+        .hero p {
+          font-size: 15px;
+        }
+
+        .section-head h2 {
+          font-size: clamp(20px, 4vw, 28px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="section" id="html-tags">
+        <div class="section-head">
+          <h2>Thẻ HTML cần nhớ</h2>
+          <p>
+            Bảng tra cứu nhanh về thẻ, công dụng và cú pháp. Cột "Mã" dùng cú
+            pháp chuẩn để bạn học thuộc và chép lại cho đúng.
+          </p>
+          <p>
+            <strong>Hướng dẫn đọc ví dụ:</strong> Cột "Ví dụ" bao gồm mã nguồn
+            (trong hộp xanh) và kết quả hiển thị (bên cạnh). Bạn có thể sao chép
+            mã nguồn để thử nghiệm trực tiếp trên trình duyệt và xem kết quả
+            giống như ví dụ!
+          </p>
+          <p>
+            Các thẻ cấu hình như <code>&lt;meta&gt;</code>,
+            <code>&lt;link&gt;</code>, <code>&lt;base&gt;</code>,
+            <code>&lt;source&gt;</code> hoặc <code>&lt;track&gt;</code> không
+            hiển thị trực tiếp trên trang, nên ví dụ của chúng được ghi theo
+            dạng mã mẫu chuẩn để dễ học thuộc.
+          </p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nội dung</th>
+                <th>Mã</th>
+                <th>Công dụng</th>
+                <th>Ví dụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Khai báo HTML</td>
+                <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                <td>Bắt đầu một tài liệu HTML5.</td>
+                <td><code>&lt;!DOCTYPE html&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Thẻ gốc</td>
+                <td><code>&lt;html&gt;...&lt;/html&gt;</code></td>
+                <td>Chứa toàn bộ nội dung trang web.</td>
+                <td>
+                  <code
+                    >&lt;html
+                    lang="vi"&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Phần cấu hình</td>
+                <td><code>&lt;head&gt;...&lt;/head&gt;</code></td>
+                <td>Chứa meta, title, link CSS, script.</td>
+                <td>
+                  <code
+                    >&lt;head&gt;&lt;title&gt;Tiêu
+                    đề&lt;/title&gt;&lt;/head&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Tiêu đề tab</td>
+                <td><code>&lt;title&gt;...&lt;/title&gt;</code></td>
+                <td>Tên hiển thị trên tab trình duyệt.</td>
+                <td>
+                  <code>&lt;title&gt;Bài ghi nhớ Tin 12&lt;/title&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>Thông tin meta</td>
+                <td><code>&lt;meta&gt;</code></td>
+                <td>Khai báo bảng mã, viewport, mô tả.</td>
+                <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Liên kết file ngoài</td>
+                <td><code>&lt;link&gt;</code></td>
+                <td>Nạp CSS hoặc tài nguyên ngoài.</td>
+                <td>
+                  <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>CSS nội bộ</td>
+                <td><code>&lt;style&gt;...&lt;/style&gt;</code></td>
+                <td>Viết CSS ngay trong trang.</td>
+                <td>
+                  <code>&lt;style&gt;body { color: red; }&lt;/style&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>Nội dung hiển thị</td>
+                <td><code>&lt;body&gt;...&lt;/body&gt;</code></td>
+                <td>Phần người dùng nhìn thấy trên trang.</td>
+                <td>
+                  <code
+                    >&lt;body&gt;&lt;h1&gt;Chào
+                    mừng&lt;/h1&gt;&lt;/body&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>JavaScript</td>
+                <td><code>&lt;script&gt;...&lt;/script&gt;</code></td>
+                <td>Chèn mã JavaScript vào trang.</td>
+                <td>
+                  <code>&lt;script&gt;alert('Hello!');&lt;/script&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>Đường dẫn gốc</td>
+                <td><code>&lt;base&gt;</code></td>
+                <td>Đặt URL gốc cho các đường dẫn tương đối.</td>
+                <td><code>&lt;base href="https://example.com/"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Tiêu đề lớn đến nhỏ</td>
+                <td>
+                  <code
+                    >&lt;h1&gt;...&lt;/h1&gt; đến &lt;h6&gt;...&lt;/h6&gt;</code
+                  >
+                </td>
+                <td>Tạo các mức tiêu đề theo cấp độ.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;h1&gt;Tiêu đề chính&lt;/h1&gt;</code>
+                    <div class="example-output">
+                      <span class="demo-heading">Tiêu đề chính</span>
+                    </div>
+                    <span class="example-note">Đây là tiêu đề lớn nhất.</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Đoạn văn bản</td>
+                <td><code>&lt;p&gt;...&lt;/p&gt;</code></td>
+                <td>Tạo đoạn văn.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;p&gt;Đây là một đoạn văn.&lt;/p&gt;</code>
+                    <div class="example-output">Đây là một đoạn văn.</div>
+                    <span class="example-note">Đoạn văn bản bình thường.</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Xuống dòng</td>
+                <td><code>&lt;br&gt;</code></td>
+                <td>Xuống dòng mà không tạo đoạn mới.</td>
+                <td>
+                  <code>Dòng 1&lt;br&gt;Dòng 2</code>
+                  <span class="example">Dòng 1<br />Dòng 2</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Đường kẻ ngang</td>
+                <td><code>&lt;hr&gt;</code></td>
+                <td>Tạo đường ngăn cách nội dung.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;hr&gt;</code>
+                    <div class="example-output">
+                      <hr class="demo-divider" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>In đậm - quan trọng</td>
+                <td><code>&lt;strong&gt;...&lt;/strong&gt;</code></td>
+                <td>Nhấn mạnh nghĩa và in đậm.</td>
+                <td>
+                  <code>&lt;strong&gt;Quan trọng&lt;/strong&gt;</code>
+                  <span class="example"><strong>Quan trọng</strong></span> (Chữ
+                  in đậm để nhấn mạnh)
+                </td>
+              </tr>
+              <tr>
+                <td>In đậm - thường</td>
+                <td><code>&lt;b&gt;...&lt;/b&gt;</code></td>
+                <td>In đậm không nhấn nghĩa đặc biệt.</td>
+                <td>
+                  <code>&lt;b&gt;In đậm&lt;/b&gt;</code>
+                  <span class="example"><b>In đậm</b></span>
+                </td>
+              </tr>
+              <tr>
+                <td>In nghiêng</td>
+                <td><code>&lt;em&gt;...&lt;/em&gt;</code></td>
+                <td>Nhắc mạnh bằng kiểu nghiêng.</td>
+                <td>
+                  <code>&lt;em&gt;Nghiêng&lt;/em&gt;</code>
+                  <span class="example"><em>Nghiêng</em></span> (Chữ in nghiêng)
+                </td>
+              </tr>
+              <tr>
+                <td>In nghiêng - thường</td>
+                <td><code>&lt;i&gt;...&lt;/i&gt;</code></td>
+                <td>In nghiêng không nhấn nghĩa đặc biệt.</td>
+                <td>
+                  <code>&lt;i&gt;Nghiêng&lt;/i&gt;</code>
+                  <span class="example"><i>Nghiêng</i></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Gạch chân</td>
+                <td><code>&lt;u&gt;...&lt;/u&gt;</code></td>
+                <td>Gạch chân văn bản.</td>
+                <td>
+                  <code>&lt;u&gt;Gạch chân&lt;/u&gt;</code>
+                  <span class="example"><u>Gạch chân</u></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Đánh dấu nền vàng</td>
+                <td><code>&lt;mark&gt;...&lt;/mark&gt;</code></td>
+                <td>Tô sáng phần văn bản.</td>
+                <td>
+                  <code>&lt;mark&gt;Tô sáng&lt;/mark&gt;</code>
+                  <span class="example"><mark>Tô sáng</mark></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Chữ nhỏ</td>
+                <td><code>&lt;small&gt;...&lt;/small&gt;</code></td>
+                <td>Hiển thị chữ nhỏ hơn.</td>
+                <td>
+                  <code>&lt;small&gt;Chữ nhỏ&lt;/small&gt;</code>
+                  <span class="example"><small>Chữ nhỏ</small></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Xóa - gạch giữa chữ</td>
+                <td><code>&lt;del&gt;...&lt;/del&gt;</code></td>
+                <td>Đánh dấu nội dung đã xóa.</td>
+                <td>
+                  <code>&lt;del&gt;Đã xóa&lt;/del&gt;</code>
+                  <span class="example"><del>Đã xóa</del></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Thêm</td>
+                <td><code>&lt;ins&gt;...&lt;/ins&gt;</code></td>
+                <td>Đánh dấu nội dung mới chèn.</td>
+                <td>
+                  <code>&lt;ins&gt;Thêm mới&lt;/ins&gt;</code>
+                  <span class="example"><ins>Thêm mới</ins></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Chữ nhỏ nằm dưới</td>
+                <td><code>&lt;sub&gt;...&lt;/sub&gt;</code></td>
+                <td>Chỉ số dưới, công thức hóa học.</td>
+                <td>
+                  <code>H&lt;sub&gt;2&lt;/sub&gt;O</code>
+                  <span class="example">H<sub>2</sub>O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Chữ nhỏ nằm trên</td>
+                <td><code>&lt;sup&gt;...&lt;/sup&gt;</code></td>
+                <td>Chỉ số trên, số mũ.</td>
+                <td>
+                  <code>x&lt;sup&gt;2&lt;/sup&gt;</code>
+                  <span class="example">x<sup>2</sup></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Đường liên kết</td>
+                <td><code>&lt;a href="..."&gt;...&lt;/a&gt;</code></td>
+                <td>Tạo link đến trang khác hoặc vị trí khác.</td>
+                <td>
+                  <code
+                    >&lt;a href="https://example.com"&gt;Link&lt;/a&gt;</code
+                  >
+                  <span class="example"><a href="#">Link</a></span> (Đây là liên
+                  kết, click để chuyển trang)
+                </td>
+              </tr>
+              <tr>
+                <td>Ảnh</td>
+                <td><code>&lt;img src="..." alt="..."&gt;</code></td>
+                <td>Chèn hình ảnh vào trang.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;img src="image.jpg" alt="Mô tả ảnh"&gt;</code>
+                    <div class="example-output">
+                      <span
+                        class="demo-image"
+                        role="img"
+                        aria-label="Ảnh minh họa"
+                      ></span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Video</td>
+                <td><code>&lt;video&gt;...&lt;/video&gt;</code></td>
+                <td>Phát video trên trang.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;video src="video.mp4"
+                      controls&gt;&lt;/video&gt;</code
+                    >
+                    <div class="example-output">
+                      <span class="demo-frame">Khung video</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Âm thanh</td>
+                <td><code>&lt;audio&gt;...&lt;/audio&gt;</code></td>
+                <td>Phát âm thanh.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;audio src="sound.mp3"
+                      controls&gt;&lt;/audio&gt;</code
+                    >
+                    <div class="example-output">
+                      <span class="demo-chip">Thanh phát audio</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Thẻ nguồn hỗ trợ nhiều định dạng</td>
+                <td><code>&lt;source&gt;</code></td>
+                <td>
+                  Thường dùng trong <code>&lt;video&gt;</code> hoặc
+                  <code>&lt;audio&gt;</code>.
+                </td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;source src="video.webm" type="video/webm"&gt;</code
+                    >
+                    <div class="example-output">
+                      <span class="demo-chip">Nguồn video .webm</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Phụ đề video</td>
+                <td><code>&lt;track&gt;</code></td>
+                <td>Chèn subtitle hoặc chú thích cho video.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;track src="subs.vtt" kind="subtitles"
+                      srclang="vi"&gt;</code
+                    >
+                    <div class="example-output">
+                      <span class="demo-chip">Phụ đề tiếng Việt</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Nhúng nội dung ngoài</td>
+                <td><code>&lt;iframe&gt;</code></td>
+                <td>Nhúng trang web, video, bản đồ.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;iframe src="https://example.com" width="300"
+                      height="200"&gt;&lt;/iframe&gt;</code
+                    >
+                    <div class="example-output">
+                      <span class="demo-frame">Trang được nhúng</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Chia nội dung bằng khung</td>
+                <td><code>&lt;frameset&gt;...&lt;/frameset&gt;</code></td>
+                <td>Thẻ cũ để chia cửa sổ thành nhiều khung.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;frameset cols="50%,50%"&gt;&lt;frame
+                      src="page1.html"&gt;&lt;frame
+                      src="page2.html"&gt;&lt;/frameset&gt;</code
+                    >
+                    <div class="example-output">
+                      <span class="demo-chip">Khung trái | khung phải</span>
+                    </div>
+                    <span class="example-note"
+                      >Thẻ cũ, nay hầu như không dùng.</span
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Khung</td>
+                <td><code>&lt;frame&gt;</code></td>
+                <td>Xác định nội dung của từng khung.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;frame src="content.html"&gt;</code>
+                    <div class="example-output">
+                      <span class="demo-chip">Một khung con</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Danh sách không thứ tự</td>
+                <td><code>&lt;ul&gt;...&lt;/ul&gt;</code></td>
+                <td>Danh sách đầu dòng chấm tròn.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;ul&gt;&lt;li&gt;Mục 1&lt;/li&gt;&lt;li&gt;Mục
+                      2&lt;/li&gt;&lt;/ul&gt;</code
+                    >
+                    <div class="example-output">
+                      <ul class="demo-list">
+                        <li>Mục 1</li>
+                        <li>Mục 2</li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Danh sách có thứ tự</td>
+                <td><code>&lt;ol&gt;...&lt;/ol&gt;</code></td>
+                <td>Danh sách đánh số 1, 2, 3.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;ol&gt;&lt;li&gt;Mục 1&lt;/li&gt;&lt;li&gt;Mục
+                      2&lt;/li&gt;&lt;/ol&gt;</code
+                    >
+                    <div class="example-output">
+                      <ol class="demo-list">
+                        <li>Mục 1</li>
+                        <li>Mục 2</li>
+                      </ol>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Mục trong danh sách</td>
+                <td><code>&lt;li&gt;...&lt;/li&gt;</code></td>
+                <td>
+                  Mỗi mục con nằm trong <code>&lt;ul&gt;</code> hoặc
+                  <code>&lt;ol&gt;</code>.
+                </td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;li&gt;Mục cần nhớ&lt;/li&gt;</code>
+                    <div class="example-output">
+                      <ul class="demo-list">
+                        <li>Mục cần nhớ</li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Danh sách mô tả</td>
+                <td><code>&lt;dl&gt;...&lt;/dl&gt;</code></td>
+                <td>Danh sách gồm thuật ngữ và mô tả.</td>
+                <td>
+                  <code
+                    >&lt;dl&gt;&lt;dt&gt;Thuật ngữ&lt;/dt&gt;&lt;dd&gt;Mô
+                    tả&lt;/dd&gt;&lt;/dl&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Thuật ngữ</td>
+                <td><code>&lt;dt&gt;...&lt;/dt&gt;</code></td>
+                <td>Tên mục trong danh sách mô tả.</td>
+                <td><code>&lt;dt&gt;HTML&lt;/dt&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Mô tả</td>
+                <td><code>&lt;dd&gt;...&lt;/dd&gt;</code></td>
+                <td>Nội dung giải thích cho thuật ngữ.</td>
+                <td>
+                  <code
+                    >&lt;dd&gt;Ngôn ngữ đánh dấu siêu văn bản&lt;/dd&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Bảng</td>
+                <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+                <td>Tạo bảng dữ liệu.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;table&gt;&lt;tr&gt;&lt;td&gt;Dữ
+                      liệu&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code
+                    >
+                    <div class="example-output">
+                      <table class="demo-table">
+                        <tr>
+                          <th>Môn</th>
+                          <th>Điểm</th>
+                        </tr>
+                        <tr>
+                          <td>Tin</td>
+                          <td>9</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Hàng</td>
+                <td><code>&lt;tr&gt;...&lt;/tr&gt;</code></td>
+                <td>Một hàng trong bảng.</td>
+                <td>
+                  <code
+                    >&lt;tr&gt;&lt;td&gt;Cột 1&lt;/td&gt;&lt;td&gt;Cột
+                    2&lt;/td&gt;&lt;/tr&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Tiêu đề cột</td>
+                <td><code>&lt;th&gt;...&lt;/th&gt;</code></td>
+                <td>Ô tiêu đề trong bảng.</td>
+                <td><code>&lt;th&gt;Tiêu đề&lt;/th&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Dữ liệu</td>
+                <td><code>&lt;td&gt;...&lt;/td&gt;</code></td>
+                <td>Ô dữ liệu trong bảng.</td>
+                <td><code>&lt;td&gt;Dữ liệu&lt;/td&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Đầu bảng</td>
+                <td><code>&lt;thead&gt;...&lt;/thead&gt;</code></td>
+                <td>Nhóm phần tiêu đề bảng.</td>
+                <td>
+                  <code
+                    >&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Thân bảng</td>
+                <td><code>&lt;tbody&gt;...&lt;/tbody&gt;</code></td>
+                <td>Nhóm phần nội dung chính của bảng.</td>
+                <td>
+                  <code
+                    >&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Dữ
+                    liệu&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Cuối bảng</td>
+                <td><code>&lt;tfoot&gt;...&lt;/tfoot&gt;</code></td>
+                <td>Nhóm phần tổng kết cuối bảng.</td>
+                <td>
+                  <code
+                    >&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Tổng&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Tiêu đề bảng</td>
+                <td><code>&lt;caption&gt;...&lt;/caption&gt;</code></td>
+                <td>Tiêu đề chung của bảng.</td>
+                <td>
+                  <code>&lt;caption&gt;Bảng dữ liệu&lt;/caption&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>Khối chung</td>
+                <td><code>&lt;div&gt;...&lt;/div&gt;</code></td>
+                <td>Phân chia khối nội dung.</td>
+                <td><code>&lt;div&gt;Nội dung&lt;/div&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Nội tuyến</td>
+                <td><code>&lt;span&gt;...&lt;/span&gt;</code></td>
+                <td>Định dạng một đoạn nhỏ trong dòng.</td>
+                <td><code>&lt;span&gt;Đoạn nhỏ&lt;/span&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Đầu trang</td>
+                <td><code>&lt;header&gt;...&lt;/header&gt;</code></td>
+                <td>Phần đầu trang hoặc đầu khu vực.</td>
+                <td>
+                  <code
+                    >&lt;header&gt;&lt;h1&gt;Tiêu
+                    đề&lt;/h1&gt;&lt;/header&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Menu điều hướng</td>
+                <td><code>&lt;nav&gt;...&lt;/nav&gt;</code></td>
+                <td>Chứa liên kết điều hướng.</td>
+                <td>
+                  <code
+                    >&lt;nav&gt;&lt;a
+                    href="#"&gt;Home&lt;/a&gt;&lt;/nav&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Nội dung chính</td>
+                <td><code>&lt;main&gt;...&lt;/main&gt;</code></td>
+                <td>Khu vực nội dung chính của trang.</td>
+                <td>
+                  <code
+                    >&lt;main&gt;&lt;p&gt;Nội dung
+                    chính&lt;/p&gt;&lt;/main&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Phần nội dung</td>
+                <td><code>&lt;section&gt;...&lt;/section&gt;</code></td>
+                <td>Chia thành từng khu vực nội dung.</td>
+                <td>
+                  <code
+                    >&lt;section&gt;&lt;h2&gt;Phần
+                    1&lt;/h2&gt;&lt;/section&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Bài viết độc lập</td>
+                <td><code>&lt;article&gt;...&lt;/article&gt;</code></td>
+                <td>Nội dung độc lập, có thể tách riêng.</td>
+                <td>
+                  <code
+                    >&lt;article&gt;&lt;h3&gt;Bài
+                    viết&lt;/h3&gt;&lt;/article&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Thanh bên</td>
+                <td><code>&lt;aside&gt;...&lt;/aside&gt;</code></td>
+                <td>Nội dung phụ, gợi ý, quảng cáo.</td>
+                <td>
+                  <code
+                    >&lt;aside&gt;&lt;p&gt;Quảng
+                    cáo&lt;/p&gt;&lt;/aside&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Cuối trang</td>
+                <td><code>&lt;footer&gt;...&lt;/footer&gt;</code></td>
+                <td>Thông tin cuối trang.</td>
+                <td>
+                  <code
+                    >&lt;footer&gt;&lt;p&gt;Bản
+                    quyền&lt;/p&gt;&lt;/footer&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Khung form</td>
+                <td><code>&lt;form&gt;...&lt;/form&gt;</code></td>
+                <td>Chứa các điều khiển nhập liệu.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;form action="/submit"&gt;&lt;input
+                      type="text"&gt;&lt;/form&gt;</code
+                    >
+                    <div class="example-output">
+                      <form class="demo-form">
+                        <input type="text" placeholder="Nhập tên" />
+                        <button type="button">Gửi</button>
+                      </form>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Ô nhập liệu</td>
+                <td><code>&lt;input&gt;</code></td>
+                <td>Tạo ô nhập một dòng.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;input type="text" name="username"&gt;</code>
+                    <div class="example-output">
+                      <div class="demo-form">
+                        <input
+                          type="text"
+                          id="example-input"
+                          placeholder="Nhập tên"
+                          oninput="updateOutput(this.value)"
+                        />
+                        <div class="demo-input-output" id="input-output"></div>
+                      </div>
+                    </div>
+                    <span class="example-note"
+                      >Nhập thử để xem kết quả hiện ra.</span
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Ô nhập nhiều dòng</td>
+                <td><code>&lt;textarea&gt;...&lt;/textarea&gt;</code></td>
+                <td>Nhập văn bản dài nhiều dòng.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;textarea rows="4" cols="50"&gt;Nội
+                      dung&lt;/textarea&gt;</code
+                    >
+                    <div class="example-output">
+                      <div class="demo-form">
+                        <textarea>
+Dòng 1
+Dòng 2</textarea
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Nút bấm</td>
+                <td><code>&lt;button&gt;...&lt;/button&gt;</code></td>
+                <td>Tạo nút thao tác.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;button type="submit"&gt;Gửi&lt;/button&gt;</code>
+                    <div class="example-output">
+                      <button type="button" onclick="showAlert()">Gửi</button>
+                    </div>
+                    <span class="example-note"
+                      >Bấm nút để xem ví dụ hành động.</span
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Hộp chọn</td>
+                <td><code>&lt;select&gt;...&lt;/select&gt;</code></td>
+                <td>Tạo danh sách xổ xuống để chọn một giá trị.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;select&gt;&lt;option&gt;Lớp
+                      12A1&lt;/option&gt;&lt;/select&gt;</code
+                    >
+                    <div class="example-output">
+                      <div class="demo-form">
+                        <select>
+                          <option>Lớp 12A1</option>
+                          <option>Lớp 12A2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Lựa chọn</td>
+                <td><code>&lt;option&gt;</code></td>
+                <td>Mục chọn trong <code>&lt;select&gt;</code>.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;option value="1"&gt;Lựa chọn 1&lt;/option&gt;</code
+                    >
+                    <div class="example-output">
+                      <span class="demo-chip">Lựa chọn 1</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Nhóm trường nhập liệu</td>
+                <td><code>&lt;fieldset&gt;...&lt;/fieldset&gt;</code></td>
+                <td>Nhóm các phần tử trong form.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;fieldset&gt;&lt;legend&gt;Thông
+                      tin&lt;/legend&gt;&lt;input&gt;&lt;/fieldset&gt;</code
+                    >
+                    <div class="example-output">
+                      <fieldset>
+                        <legend>Thông tin</legend>
+                        <input type="text" placeholder="Họ tên" />
+                      </fieldset>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Tiêu đề nhóm</td>
+                <td><code>&lt;legend&gt;...&lt;/legend&gt;</code></td>
+                <td>Đặt nhãn cho <code>&lt;fieldset&gt;</code>.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;legend&gt;Thông tin liên hệ&lt;/legend&gt;</code>
+                    <div class="example-output">
+                      <span class="demo-chip">Thông tin liên hệ</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Chọn nhiều mục</td>
+                <td><code>&lt;select multiple&gt;...&lt;/select&gt;</code></td>
+                <td>Hộp lựa chọn cho phép chọn nhiều giá trị.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;select
+                      multiple&gt;&lt;option&gt;Toán&lt;/option&gt;&lt;option&gt;Tin&lt;/option&gt;&lt;/select&gt;</code
+                    >
+                    <div class="example-output">
+                      <div class="demo-form">
+                        <select multiple>
+                          <option>Toán</option>
+                          <option selected>Tin</option>
+                          <option>Lý</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Checkbox</td>
+                <td><code>&lt;input type="checkbox"&gt;</code></td>
+                <td>Ô đánh dấu chọn hoặc bỏ chọn.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;input type="checkbox" name="agree"&gt; Đồng ý</code
+                    >
+                    <div class="example-output">
+                      <label><input type="checkbox" checked /> Đồng ý</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Radio</td>
+                <td><code>&lt;input type="radio"&gt;</code></td>
+                <td>Chọn một phương án duy nhất trong nhiều phương án.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;input type="radio" name="gioi-tinh"&gt; Nam</code>
+                    <div class="example-output">
+                      <label
+                        ><input type="radio" name="demo-radio" checked />
+                        Nam</label
+                      >
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Nhãn cho input</td>
+                <td><code>&lt;label&gt;...&lt;/label&gt;</code></td>
+                <td>Gắn nhãn cho phần tử form.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;label for="email"&gt;Email:&lt;/label&gt;&lt;input
+                      id="email"&gt;</code
+                    >
+                    <div class="example-output">
+                      <label for="demo-email">Email:</label>
+                      <input
+                        id="demo-email"
+                        type="text"
+                        placeholder="abc@gmail.com"
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Trích dẫn dài</td>
+                <td><code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code></td>
+                <td>Trích dẫn một đoạn văn bản dài.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;blockquote&gt;Học đi đôi với
+                      hành.&lt;/blockquote&gt;</code
+                    >
+                    <div class="example-output">
+                      <blockquote class="demo-quote">
+                        Học đi đôi với hành.
+                      </blockquote>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Văn bản định dạng trước</td>
+                <td><code>&lt;pre&gt;...&lt;/pre&gt;</code></td>
+                <td>Giữ nguyên định dạng, khoảng trắng.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;pre&gt;Dòng 1\nDòng 2&lt;/pre&gt;</code>
+                    <div class="example-output">
+                      <pre class="demo-pre">
+Dòng 1
+Dòng 2</pre
+                      >
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Mã nguồn</td>
+                <td><code>&lt;code&gt;...&lt;/code&gt;</code></td>
+                <td>Đánh dấu đoạn mã nguồn.</td>
+                <td>
+                  <div class="example-block">
+                    <code>&lt;code&gt;console.log('Hello');&lt;/code&gt;</code>
+                    <div class="example-output">
+                      <code>console.log('Hello');</code>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Đầu vào bàn phím</td>
+                <td><code>&lt;kbd&gt;...&lt;/kbd&gt;</code></td>
+                <td>Đánh dấu phím nhấn trên bàn phím.</td>
+                <td>
+                  <div class="example-block">
+                    <code
+                      >&lt;kbd&gt;Ctrl&lt;/kbd&gt; +
+                      &lt;kbd&gt;C&lt;/kbd&gt;</code
+                    >
+                    <div class="example-output">
+                      <span class="demo-kbd"
+                        ><kbd>Ctrl</kbd> + <kbd>C</kbd></span
+                      >
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      </section>
+
+      <p class="footer">
+        Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
+        ôn tập bất cứ lúc nào.
+      </p>
+    </main>
+    </main>
+    <script>
+      function updateOutput(value) {
+        const output = document.getElementById("input-output");
+        if (!output) {
+          return;
+        }
+
+        output.textContent = value ? "Bạn đã nhập: " + value : "";
+      }
+
+      function showAlert() {
+        alert("Bạn đã nhấn nút! Đây là hành động của button.");
+      }
+    </script>
+  </body>
+</html>

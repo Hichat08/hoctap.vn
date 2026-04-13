@@ -566,87 +566,86 @@
     </style>
   </head>
   <body>
-    <main class="page">    <main class="page">
-      <section class="hero">
-        <span class="badge">Tài liệu học thuộc Tin 12</span>
-        <h1>Tổng hợp nhanh các phần ôn tập</h1>
-        <p>
-          Mỗi phần trong menu dưới đây đã được tách ra thành trang riêng để bạn
-          học gọn, dễ truy cập và không bị rối khi xem trên điện thoại.
-        </p>
-        <div class="note">
-          Chọn một mục để mở trang riêng: Thẻ HTML, CSS, Mạng, Trọng tâm Tin 12,
-          Ôn thi Tin 12 hoặc Ghi nhớ nhanh.
-        </div>
-        <nav class="quick-links">
-          <a href="html-tags.html">Thẻ HTML</a>
-          <a href="css-layout.html">Màu và bố cục CSS</a>
-          <a href="network.html">Mạng</a>
-          <a href="informatics.html">Trọng tâm Tin 12</a>
-          <a href="exam-review.html">Ôn thi Tin 12</a>
-          <a href="summary.html">Ghi nhớ nhanh</a>
-        </nav>
-      </section>
-
-      <section class="section" id="overview">
+    <main class="page">
+      <section class="section" id="summary">
         <div class="section-head">
-          <h2>Chọn học nhanh</h2>
+          <h2>Ghi nhớ nhanh</h2>
           <p>
-            Các trang đã được chia nhỏ để ôn tập từng nội dung, giảm rối mắt khi học
-            và thuận tiện mở trên điện thoại.
+            Nếu cần học thuộc nhanh, bạn có thể nhớ theo nhóm thay vì học rời
+            rạc từng dòng.
           </p>
         </div>
         <div class="grid">
           <article class="card">
-            <h3>Thẻ HTML</h3>
+            <h3>Khung HTML cơ bản</h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Cú pháp thẻ và ví dụ trực quan.</div>
-              <div><a href="html-tags.html">Mở trang Thẻ HTML</a></div>
+              <div>
+                <strong>Cấu trúc:</strong>
+                <code
+                  >&lt;!DOCTYPE html&gt; - &lt;html&gt; - &lt;head&gt; -
+                  &lt;body&gt;</code
+                >
+              </div>
+              <div>
+                <strong>Nội dung chữ:</strong>
+                <code>h1-h6, p, br, hr, div, span</code>
+              </div>
+              <div>
+                <strong>Đa phương tiện:</strong>
+                <code>img, audio, video, source, track, iframe</code>
+              </div>
             </div>
           </article>
           <article class="card">
-            <h3>CSS</h3>
+            <h3>Form và bảng</h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Thuộc tính màu, bố cục và hiển thị.</div>
-              <div><a href="css-layout.html">Mở trang CSS</a></div>
+              <div>
+                <strong>Form:</strong>
+                <code
+                  >form, input, textarea, button, select, option, fieldset,
+                  legend, label</code
+                >
+              </div>
+              <div>
+                <strong>Bảng:</strong>
+                <code>table, tr, th, td, thead, tbody, tfoot, caption</code>
+              </div>
+              <div>
+                <strong>Danh sách:</strong>
+                <code>ul, ol, li, dl, dt, dd</code>
+              </div>
             </div>
           </article>
           <article class="card">
-            <h3>Mạng</h3>
+            <h3>CSS và mạng</h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Khái niệm TCP/IP, DNS, LAN/WAN, firewall.</div>
-              <div><a href="network.html">Mở trang Mạng</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Trọng tâm Tin 12</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Cơ sở dữ liệu, lập trình, an toàn thông tin.</div>
-              <div><a href="informatics.html">Mở trang Tin 12</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Ôn thi Tin 12</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Tips, câu hỏi mẫu và điểm cần chú ý.</div>
-              <div><a href="exam-review.html">Mở trang Ôn thi</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Ghi nhớ nhanh</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Tóm tắt các nhóm thẻ, CSS và mạng.</div>
-              <div><a href="summary.html">Mở trang Ghi nhớ</a></div>
+              <div>
+                <strong>CSS nên nhớ:</strong>
+                <code
+                  >color, background-color, border, font, padding, margin</code
+                >
+              </div>
+              <div>
+                <strong>Mạng:</strong>
+                <code>TCP/IP, HTTP, HTTPS, SMTP, POP3, IMAP, FTP, DNS</code>
+              </div>
+              <div>
+                <strong>Wi-Fi:</strong>
+                <code>Router, SSID, Mobile hotspot</code>
+              </div>
             </div>
           </article>
         </div>
+      </section>
       </section>
 
       <p class="footer">
         Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
         ôn tập bất cứ lúc nào.
       </p>
-    </main>    <script>
+    </main>
+    </main>
+    <script>
       function updateOutput(value) {
         const output = document.getElementById("input-output");
         if (!output) {

@@ -566,87 +566,185 @@
     </style>
   </head>
   <body>
-    <main class="page">    <main class="page">
-      <section class="hero">
-        <span class="badge">Tài liệu học thuộc Tin 12</span>
-        <h1>Tổng hợp nhanh các phần ôn tập</h1>
-        <p>
-          Mỗi phần trong menu dưới đây đã được tách ra thành trang riêng để bạn
-          học gọn, dễ truy cập và không bị rối khi xem trên điện thoại.
-        </p>
-        <div class="note">
-          Chọn một mục để mở trang riêng: Thẻ HTML, CSS, Mạng, Trọng tâm Tin 12,
-          Ôn thi Tin 12 hoặc Ghi nhớ nhanh.
-        </div>
-        <nav class="quick-links">
-          <a href="html-tags.html">Thẻ HTML</a>
-          <a href="css-layout.html">Màu và bố cục CSS</a>
-          <a href="network.html">Mạng</a>
-          <a href="informatics.html">Trọng tâm Tin 12</a>
-          <a href="exam-review.html">Ôn thi Tin 12</a>
-          <a href="summary.html">Ghi nhớ nhanh</a>
-        </nav>
-      </section>
-
-      <section class="section" id="overview">
+    <main class="page">
+      <section class="section" id="css-layout">
         <div class="section-head">
-          <h2>Chọn học nhanh</h2>
+          <h2>Màu và bố cục CSS</h2>
           <p>
-            Các trang đã được chia nhỏ để ôn tập từng nội dung, giảm rối mắt khi học
-            và thuận tiện mở trên điện thoại.
+            Đây là các màu cơ bản và thuộc tính CSS thường gặp trong bài học.
+            Mỗi thuộc tính đều có thêm ví dụ ngắn để bạn chép lại nhanh.
           </p>
         </div>
-        <div class="grid">
-          <article class="card">
-            <h3>Thẻ HTML</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Cú pháp thẻ và ví dụ trực quan.</div>
-              <div><a href="html-tags.html">Mở trang Thẻ HTML</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>CSS</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Thuộc tính màu, bố cục và hiển thị.</div>
-              <div><a href="css-layout.html">Mở trang CSS</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Mạng</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Khái niệm TCP/IP, DNS, LAN/WAN, firewall.</div>
-              <div><a href="network.html">Mở trang Mạng</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Trọng tâm Tin 12</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Cơ sở dữ liệu, lập trình, an toàn thông tin.</div>
-              <div><a href="informatics.html">Mở trang Tin 12</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Ôn thi Tin 12</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Tips, câu hỏi mẫu và điểm cần chú ý.</div>
-              <div><a href="exam-review.html">Mở trang Ôn thi</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Ghi nhớ nhanh</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Tóm tắt các nhóm thẻ, CSS và mạng.</div>
-              <div><a href="summary.html">Mở trang Ghi nhớ</a></div>
-            </div>
-          </article>
+        <div class="swatches">
+          <div class="swatch" style="background: #000; color: #fff">
+            <strong>Black</strong>
+            <span>Màu đen</span>
+          </div>
+          <div class="swatch" style="background: #fff; color: #111">
+            <strong>White</strong>
+            <span>Màu trắng</span>
+          </div>
+          <div class="swatch" style="background: #ef4444; color: #fff">
+            <strong>Red</strong>
+            <span>Màu đỏ</span>
+          </div>
+          <div class="swatch" style="background: #22c55e; color: #052e16">
+            <strong>Green</strong>
+            <span>Màu xanh lá cây</span>
+          </div>
+          <div class="swatch" style="background: #2563eb; color: #fff">
+            <strong>Blue</strong>
+            <span>Màu xanh nước biển</span>
+          </div>
+          <div class="swatch" style="background: #facc15; color: #3f2d00">
+            <strong>Yellow</strong>
+            <span>Màu vàng</span>
+          </div>
         </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nội dung</th>
+                <th>Cú pháp</th>
+                <th>Ý nghĩa</th>
+                <th>Ví dụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Màu chữ</td>
+                <td><code>color:</code></td>
+                <td>Đổi màu văn bản.</td>
+                <td><code>color: #0f766e;</code></td>
+              </tr>
+              <tr>
+                <td>Màu nền</td>
+                <td><code>background-color:</code></td>
+                <td>Đổi màu nền của phần tử.</td>
+                <td><code>background-color: #fff7ed;</code></td>
+              </tr>
+              <tr>
+                <td>Đường viền</td>
+                <td><code>border:</code></td>
+                <td>Đặt độ dày, kiểu và màu của viền.</td>
+                <td><code>border: 1px solid #cbd5e1;</code></td>
+              </tr>
+              <tr>
+                <td>Kiểu viền</td>
+                <td><code>border-style:</code></td>
+                <td>Chọn dạng viền: solid, dashed, dotted.</td>
+                <td><code>border-style: dashed;</code></td>
+              </tr>
+              <tr>
+                <td>Kích cỡ chữ</td>
+                <td><code>font-size:</code></td>
+                <td>Điều chỉnh độ lớn văn bản.</td>
+                <td><code>font-size: 18px;</code></td>
+              </tr>
+              <tr>
+                <td>Phông chữ</td>
+                <td><code>font-family:</code></td>
+                <td>Đặt kiểu chữ hiển thị.</td>
+                <td><code>font-family: Arial, sans-serif;</code></td>
+              </tr>
+              <tr>
+                <td>Độ đậm chữ</td>
+                <td><code>font-weight:</code></td>
+                <td>Điều chỉnh độ đậm, ví dụ 400, 700, bold.</td>
+                <td><code>font-weight: 700;</code></td>
+              </tr>
+              <tr>
+                <td>Kiểu chữ</td>
+                <td><code>font-style:</code></td>
+                <td>Đặt nghiêng hoặc bình thường.</td>
+                <td><code>font-style: italic;</code></td>
+              </tr>
+              <tr>
+                <td>Vùng đệm</td>
+                <td><code>padding:</code></td>
+                <td>Khoảng cách từ nội dung đến viền.</td>
+                <td><code>padding: 12px 16px;</code></td>
+              </tr>
+              <tr>
+                <td>Vùng lề</td>
+                <td><code>margin:</code></td>
+                <td>Khoảng cách bên ngoài phần tử.</td>
+                <td><code>margin: 20px auto;</code></td>
+              </tr>
+              <tr>
+                <td>Chiều rộng</td>
+                <td><code>width:</code></td>
+                <td>Đặt độ rộng nội dung.</td>
+                <td><code>width: 300px;</code></td>
+              </tr>
+              <tr>
+                <td>Chiều cao</td>
+                <td><code>height:</code></td>
+                <td>Đặt độ cao nội dung.</td>
+                <td><code>height: 120px;</code></td>
+              </tr>
+              <tr>
+                <td>Ẩn đầu dòng danh sách</td>
+                <td><code>list-style-type: none;</code></td>
+                <td>Bỏ ký hiệu đầu dòng của danh sách.</td>
+                <td><code>list-style-type: none;</code></td>
+              </tr>
+              <tr>
+                <td>Căn chỉnh văn bản</td>
+                <td><code>text-align:</code></td>
+                <td>Căn trái, phải, giữa, đều.</td>
+                <td><code>text-align: center;</code></td>
+              </tr>
+              <tr>
+                <td>Gạch chân văn bản</td>
+                <td><code>text-decoration:</code></td>
+                <td>Thêm gạch chân, gạch giữa.</td>
+                <td><code>text-decoration: underline;</code></td>
+              </tr>
+              <tr>
+                <td>Chiều cao dòng</td>
+                <td><code>line-height:</code></td>
+                <td>Khoảng cách giữa các dòng.</td>
+                <td><code>line-height: 1.6;</code></td>
+              </tr>
+              <tr>
+                <td>Hiển thị phần tử</td>
+                <td><code>display:</code></td>
+                <td>block, inline, none, flex, grid.</td>
+                <td><code>display: flex;</code></td>
+              </tr>
+              <tr>
+                <td>Vị trí phần tử</td>
+                <td><code>position:</code></td>
+                <td>static, relative, absolute, fixed.</td>
+                <td><code>position: relative;</code></td>
+              </tr>
+              <tr>
+                <td>Tràn nội dung</td>
+                <td><code>overflow:</code></td>
+                <td>visible, hidden, scroll, auto.</td>
+                <td><code>overflow: hidden;</code></td>
+              </tr>
+              <tr>
+                <td>Bo góc</td>
+                <td><code>border-radius:</code></td>
+                <td>Làm bo góc cho phần tử.</td>
+                <td><code>border-radius: 12px;</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
       </section>
 
       <p class="footer">
         Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
         ôn tập bất cứ lúc nào.
       </p>
-    </main>    <script>
+    </main>
+    </main>
+    <script>
       function updateOutput(value) {
         const output = document.getElementById("input-output");
         if (!output) {
