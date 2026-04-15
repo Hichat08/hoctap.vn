@@ -3,20 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài ghi nhớ Tin 12</title>
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="Ôn thi Tin 12: Câu hỏi mẫu, mẹo học nhanh, phân biệt các khái niệm hay nhầm. Luyện tập trước khi kiểm tra."
+    />
+    <meta name="keywords" content="ôn thi, exam, câu hỏi, mẫu, kiểm tra" />
+    <title>Ôn thi Tin 12 - Exam Review</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="page">
-      <a class="back-home" href="index.html">← 🏠 Trang chính</a>
+      <a class="back-home" href="index.html">
+        <span
+          class="icon-shell icon-shell--sm icon-shell--teal"
+          aria-hidden="true"
+        >
+          <svg class="ui-icon">
+            <use href="#icon-home"></use>
+          </svg>
+        </span>
+        <span>Trang chính</span>
+      </a>
       <section class="section" id="exam-review">
         <div class="section-head">
-          <h2>Ôn thi Tin 12 - Mẹo và câu hỏi mẫu</h2>
+          <h2>
+            <span class="section-title">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--orange"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-clipboard"></use>
+                </svg>
+              </span>
+              <span>Ôn thi Tin 12 - Mẹo và câu hỏi mẫu</span>
+            </span>
+          </h2>
           <p>
             Phần này tập trung vào kiểu câu hỏi ngắn, dễ gặp khi ôn kiểm tra:
             nêu công dụng thẻ, sửa cú pháp sai, phân biệt các thẻ gần giống nhau
-            và nhớ công dụng của các giao thức mạng.
+            và nhớ công dụng của các giao thức mạng cùng cú pháp Python cơ bản.
           </p>
+          <div class="lesson-cta">
+            <p>
+              <strong>Luyện trắc nghiệm:</strong> Dùng bài quiz tổng hợp để tập
+              phản xạ nhanh trước khi làm bài kiểm tra.
+            </p>
+            <a class="back-home" href="quiz-exam-review.html">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--orange"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-clipboard"></use>
+                </svg>
+              </span>
+              <span>Mở trắc nghiệm</span>
+            </a>
+          </div>
         </div>
         <div class="grid">
           <article class="card">
@@ -34,6 +78,11 @@
                 <strong>So sánh cặp dễ nhầm:</strong> <code>strong</code> và
                 <code>b</code>, <code>em</code> và <code>i</code>,
                 <code>ul</code> và <code>ol</code>.
+              </div>
+              <div>
+                <strong>Nhóm cú pháp Python:</strong> Học theo cụm
+                <code>print()</code>, <code>input()</code>, <code>if</code>,
+                <code>for</code>, <code>while</code>, <code>def</code>.
               </div>
               <div>
                 <strong>Tự gõ lại:</strong> Mở file HTML và gõ lại không nhìn để
@@ -108,6 +157,25 @@
             </div>
           </article>
           <article class="card">
+            <h3>Câu hỏi mẫu - Python cơ bản</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Câu 1:</strong> <code>print()</code> dùng để làm gì?
+              </div>
+              <div>
+                <strong>Câu 2:</strong> Vì sao khối lệnh Python phải thụt lề?
+              </div>
+              <div>
+                <strong>Câu 3:</strong> Phân biệt <code>for</code> và
+                <code>while</code>.
+              </div>
+              <div>
+                <strong>Câu 4:</strong> Muốn khai báo hàm trong Python dùng từ
+                khóa nào?
+              </div>
+            </div>
+          </article>
+          <article class="card">
             <h3>Điểm dễ mất điểm</h3>
             <div class="mini-list">
               <div>
@@ -126,10 +194,14 @@
                 <strong>Viết sai cú pháp CSS:</strong> Thiếu dấu
                 <code>:</code> hoặc <code>;</code>.
               </div>
+              <div>
+                <strong>Python sai khối lệnh:</strong> Quên dấu
+                <code>:</code> sau <code>if</code>, <code>for</code>,
+                <code>while</code>, <code>def</code> hoặc thụt lề không đúng.
+              </div>
             </div>
           </article>
         </div>
-      </section>
       </section>
 
       <p class="footer">
@@ -137,9 +209,6 @@
         ôn tập bất cứ lúc nào.
       </p>
     </main>
-    </main>
     <script src="script.js"></script>
   </body>
 </html>
-
-

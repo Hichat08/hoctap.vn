@@ -3,19 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài ghi nhớ Tin 12</title>
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="Ghi nhớ nhanh Tin 12: Khung HTML, Form, CSS, Mạng, Python. Tóm tắt những ý chính để ôn tập hiệu quả."
+    />
+    <meta name="keywords" content="ghi nhớ, summary, tóm tắt, review" />
+    <title>Ghi nhớ nhanh Tin 12 - Summary</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="page">
-      <a class="back-home" href="index.html">← 🏠 Trang chính</a>
+      <a class="back-home" href="index.html">
+        <span
+          class="icon-shell icon-shell--sm icon-shell--teal"
+          aria-hidden="true"
+        >
+          <svg class="ui-icon">
+            <use href="#icon-home"></use>
+          </svg>
+        </span>
+        <span>Trang chính</span>
+      </a>
       <section class="section" id="summary">
         <div class="section-head">
-          <h2>Ghi nhớ nhanh</h2>
+          <h2>
+            <span class="section-title">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--gold"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-flash"></use>
+                </svg>
+              </span>
+              <span>Ghi nhớ nhanh</span>
+            </span>
+          </h2>
           <p>
-            Nếu cần học thuộc nhanh, bạn có thể nhớ theo nhóm thay vì học rời
-            rạc từng dòng.
+            Nếu cần học thuộc nhanh, bạn có thể nhớ theo nhóm HTML, CSS, mạng và
+            Python thay vì học rời rạc từng dòng.
           </p>
+          <div class="lesson-cta">
+            <p>
+              <strong>Luyện trắc nghiệm:</strong> Mở bộ câu hỏi ngắn để kiểm tra
+              xem mình còn nhớ được bao nhiêu ý chính.
+            </p>
+            <a class="back-home" href="quiz-summary.html">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--orange"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-clipboard"></use>
+                </svg>
+              </span>
+              <span>Mở trắc nghiệm</span>
+            </a>
+          </div>
         </div>
         <div class="grid">
           <article class="card">
@@ -77,8 +121,28 @@
               </div>
             </div>
           </article>
+          <article class="card">
+            <h3>Python cần nhớ</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Nhập xuất:</strong>
+                <code>print(), input(), int(), float()</code>
+              </div>
+              <div>
+                <strong>Điều kiện:</strong>
+                <code>if, elif, else</code> và luôn nhớ dấu <code>:</code>
+              </div>
+              <div>
+                <strong>Vòng lặp:</strong>
+                <code>for, while, range()</code>
+              </div>
+              <div>
+                <strong>List và hàm:</strong>
+                <code>[], append(), len(), def</code>
+              </div>
+            </div>
+          </article>
         </div>
-      </section>
       </section>
 
       <p class="footer">
@@ -86,9 +150,6 @@
         ôn tập bất cứ lúc nào.
       </p>
     </main>
-    </main>
     <script src="script.js"></script>
   </body>
 </html>
-
-

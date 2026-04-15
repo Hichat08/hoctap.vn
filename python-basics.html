@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Python Cơ bản: print, input, biến, điều kiện, vòng lặp, danh sách, hàm. Ngôn ngữ lập trình dễ học."
+    />
+    <meta name="keywords" content="Python, lập trình, code, biến, hàm" />
+    <title>Python Cơ bản - Tin 12</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-home" href="index.html">
+        <span
+          class="icon-shell icon-shell--sm icon-shell--teal"
+          aria-hidden="true"
+        >
+          <svg class="ui-icon">
+            <use href="#icon-home"></use>
+          </svg>
+        </span>
+        <span>Trang chính</span>
+      </a>
+      <section class="section" id="python-basics">
+        <div class="section-head">
+          <h2>
+            <span class="section-title">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--emerald"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-python"></use>
+                </svg>
+              </span>
+              <span>Python Cơ bản</span>
+            </span>
+          </h2>
+          <p>
+            Python là ngôn ngữ lập trình dễ đọc, cú pháp gọn và rất phù hợp để
+            làm quen với tư duy lập trình. Phần này tập trung vào các lệnh nền
+            tảng như nhập xuất dữ liệu, điều kiện, vòng lặp, danh sách và hàm.
+          </p>
+          <div class="lesson-cta">
+            <p>
+              <strong>Luyện trắc nghiệm:</strong> Kiểm tra nhanh cú pháp
+              <code>print()</code>, <code>input()</code>, <code>if</code>,
+              <code>for</code>, <code>while</code> và <code>def</code>.
+            </p>
+            <a class="back-home" href="quiz-python-basics.html">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--orange"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-clipboard"></use>
+                </svg>
+              </span>
+              <span>Mở trắc nghiệm</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>In và nhập dữ liệu</h3>
+            <div class="mini-list">
+              <div>
+                <strong>In ra màn hình:</strong> <code>print("Xin chào")</code>
+              </div>
+              <div>
+                <strong>Nhập dữ liệu:</strong>
+                <code>name = input("Tên: ")</code>
+              </div>
+              <div>
+                <strong>Lưu ý:</strong> <code>input()</code> trả về kiểu chuỗi
+                nếu chưa ép kiểu.
+              </div>
+              <div>
+                <strong>Ép kiểu số:</strong>
+                <code>age = int(input("Tuổi: "))</code>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Biến và kiểu dữ liệu</h3>
+            <div class="mini-list">
+              <div><strong>Biến:</strong> <code>score = 9.5</code></div>
+              <div><strong>Chuỗi:</strong> <code>name = "Lan"</code></div>
+              <div><strong>Số nguyên:</strong> <code>count = 12</code></div>
+              <div><strong>Boolean:</strong> <code>passed = True</code></div>
+              <div>
+                <strong>Danh sách:</strong> <code>colors = ["đỏ", "xanh"]</code>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Toán tử thường dùng</h3>
+            <div class="mini-list">
+              <div><strong>Số học:</strong> <code>+ - * / % //</code></div>
+              <div>
+                <strong>So sánh:</strong>
+                <code>== != &gt; &lt; &gt;= &lt;=</code>
+              </div>
+              <div>
+                <strong>Logic:</strong> <code>and</code>, <code>or</code>,
+                <code>not</code>
+              </div>
+              <div><strong>Gán:</strong> <code>= += -= *=</code></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Điều kiện if / elif / else</h3>
+            <div class="mini-list">
+              <div><code>if score &gt;= 8:</code></div>
+              <div><code>elif score &gt;= 5:</code></div>
+              <div><code>else:</code></div>
+              <div>
+                <strong>Quan trọng:</strong> Sau điều kiện phải có dấu
+                <code>:</code> và khối lệnh phải thụt lề.
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Vòng lặp for / while</h3>
+            <div class="mini-list">
+              <div><strong>For:</strong> <code>for i in range(5):</code></div>
+              <div>
+                <strong>Duyệt danh sách:</strong>
+                <code>for item in colors:</code>
+              </div>
+              <div><strong>While:</strong> <code>while n &gt; 0:</code></div>
+              <div>
+                <strong>Mẹo:</strong> Dùng <code>for</code> khi biết số lần lặp,
+                <code>while</code> khi lặp theo điều kiện.
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Danh sách - List</h3>
+            <div class="mini-list">
+              <div><code>numbers = [1, 2, 3]</code></div>
+              <div><strong>Truy cập:</strong> <code>numbers[0]</code></div>
+              <div>
+                <strong>Thêm phần tử:</strong> <code>numbers.append(4)</code>
+              </div>
+              <div><strong>Độ dài:</strong> <code>len(numbers)</code></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Hàm với def</h3>
+            <div class="mini-list">
+              <div><code>def greet(name):</code></div>
+              <div><code> print("Xin chào", name)</code></div>
+              <div><strong>Tham số:</strong> Giá trị truyền vào hàm</div>
+              <div><strong>return:</strong> Trả kết quả từ hàm khi cần</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Công dụng</th>
+                <th>Cú pháp</th>
+                <th>Ví dụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>In dữ liệu ra màn hình</td>
+                <td><code>print(...)</code></td>
+                <td><code>print("Hello Python")</code></td>
+              </tr>
+              <tr>
+                <td>Nhập dữ liệu từ bàn phím</td>
+                <td><code>input(...)</code></td>
+                <td><code>name = input("Tên: ")</code></td>
+              </tr>
+              <tr>
+                <td>Ép kiểu sang số nguyên</td>
+                <td><code>int(...)</code></td>
+                <td><code>age = int(input("Tuổi: "))</code></td>
+              </tr>
+              <tr>
+                <td>Lấy số phần tử hoặc độ dài chuỗi</td>
+                <td><code>len(...)</code></td>
+                <td><code>len("Python")</code></td>
+              </tr>
+              <tr>
+                <td>Thêm phần tử vào list</td>
+                <td><code>list.append(...)</code></td>
+                <td><code>numbers.append(10)</code></td>
+              </tr>
+              <tr>
+                <td>Khai báo hàm</td>
+                <td><code>def ten_ham(...):</code></td>
+                <td><code>def tinh_tong(a, b):</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Cấu trúc</th>
+                <th>Khi nào dùng</th>
+                <th>Ví dụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>if / elif / else</code></td>
+                <td>Khi cần rẽ nhánh theo điều kiện</td>
+                <td><code>if temp &gt; 30:</code></td>
+              </tr>
+              <tr>
+                <td><code>for ... in range()</code></td>
+                <td>Khi biết số lần lặp</td>
+                <td><code>for i in range(3):</code></td>
+              </tr>
+              <tr>
+                <td><code>for ... in list</code></td>
+                <td>Khi duyệt từng phần tử của danh sách</td>
+                <td><code>for item in colors:</code></td>
+              </tr>
+              <tr>
+                <td><code>while</code></td>
+                <td>Khi lặp đến lúc điều kiện sai</td>
+                <td><code>while lives &gt; 0:</code></td>
+              </tr>
+              <tr>
+                <td><code>def</code></td>
+                <td>Khi muốn gom một khối lệnh thành hàm</td>
+                <td><code>def hello():</code></td>
+              </tr>
+              <tr>
+                <td>Thụt lề</td>
+                <td>Để xác định khối lệnh thuộc if, for, while, def</td>
+                <td><code> print("inside block")</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="footer">
+        Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
+        ôn tập bất cứ lúc nào.
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

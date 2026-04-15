@@ -1,135 +1,669 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài ghi nhớ Tin 12</title>
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="Tài liệu toàn diện học Tin 12: HTML, CSS, JavaScript, Python, SQL, Mạng máy tính. Có ví dụ cụ thể, bảng tra cứu, và trắc nghiệm tương tác."
+    />
+    <meta
+      name="keywords"
+      content="Tin 12, HTML, CSS, JavaScript, Python, SQL, Mạng, học lập trình"
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Tài liệu học Tin 12 - HTML, CSS, JavaScript, Python, SQL</title>
+    <link rel="preload" as="image" href="assets/promo-student-study.jpg" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="page">
       <section class="hero">
         <span class="badge">Tài liệu học Tin 12 đầy đủ</span>
-        <h1>Tổng hợp 10 chương kiến thức</h1>
+        <h1>Tổng hợp 11 chương kiến thức</h1>
         <p>
-          Tài liệu toàn diện từ HTML cơ bản đến SQL, JavaScript, CSS Flexbox/Grid,
-          và Mạng máy tính. Mỗi chương có ví dụ cụ thể, bảng tra cứu dễ nhớ, và phù hợp
-          cho người mới bắt đầu.
+          Tài liệu toàn diện từ HTML cơ bản đến Python, SQL, JavaScript, CSS
+          Flexbox/Grid và Mạng máy tính. Mỗi chương có ví dụ cụ thể, bảng tra
+          cứu dễ nhớ, và phù hợp cho người mới bắt đầu.
         </p>
         <div class="note">
-          ✨ <strong>Mới:</strong> Thêm JavaScript cơ bản, SQL/Database, CSS Nâng cao, HTML Semantic Tags.
-          Tất cả kiến thức Tin 12 giờ đã có đủ!
+          <span
+            class="icon-shell icon-shell--sm icon-shell--gold"
+            aria-hidden="true"
+          >
+            <svg class="ui-icon">
+              <use href="#icon-flash"></use>
+            </svg>
+          </span>
+          <div class="note-content">
+            <strong>Mới:</strong> Bổ sung Python cơ bản cùng JavaScript, SQL,
+            CSS Nâng cao và HTML Semantic Tags để bộ tài liệu đầy đủ hơn.
+          </div>
         </div>
         <nav class="quick-links">
-          <a href="html-tags.html">📝 Thẻ HTML</a>
-          <a href="html-advanced.html">📄 HTML Nâng cao</a>
-          <a href="css-layout.html">🎨 CSS Cơ bản</a>
-          <a href="css-advanced.html">✨ CSS Nâng cao</a>
-          <a href="javascript-basics.html">🔧 JavaScript</a>
-          <a href="sql-database.html">💾 SQL & DB</a>
-          <a href="network.html">🌐 Mạng</a>
-          <a href="informatics.html">💻 Tin 12</a>
-          <a href="exam-review.html">📚 Ôn thi</a>
-          <a href="summary.html">⚡ Ghi nhớ</a>
+          <a href="html-tags.html">
+            <span class="icon-shell icon-shell--amber" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-html"></use>
+              </svg>
+            </span>
+            <span>Thẻ HTML</span>
+          </a>
+          <a href="html-advanced.html">
+            <span class="icon-shell icon-shell--sky" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-layout"></use>
+              </svg>
+            </span>
+            <span>HTML Nâng cao</span>
+          </a>
+          <a href="css-layout.html">
+            <span class="icon-shell icon-shell--teal" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-palette"></use>
+              </svg>
+            </span>
+            <span>CSS Cơ bản</span>
+          </a>
+          <a href="css-advanced.html">
+            <span class="icon-shell icon-shell--blue" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-grid"></use>
+              </svg>
+            </span>
+            <span>CSS Nâng cao</span>
+          </a>
+          <a href="javascript-basics.html">
+            <span class="icon-shell icon-shell--gold" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-js"></use>
+              </svg>
+            </span>
+            <span>JavaScript</span>
+          </a>
+          <a href="python-basics.html">
+            <span class="icon-shell icon-shell--emerald" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-python"></use>
+              </svg>
+            </span>
+            <span>Python</span>
+          </a>
+          <a href="sql-database.html">
+            <span class="icon-shell icon-shell--emerald" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-database"></use>
+              </svg>
+            </span>
+            <span>SQL &amp; DB</span>
+          </a>
+          <a href="network.html">
+            <span class="icon-shell icon-shell--cyan" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-network"></use>
+              </svg>
+            </span>
+            <span>Mạng</span>
+          </a>
+          <a href="informatics.html">
+            <span class="icon-shell icon-shell--slate" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-monitor"></use>
+              </svg>
+            </span>
+            <span>Tin 12</span>
+          </a>
+          <a href="exam-review.html">
+            <span class="icon-shell icon-shell--orange" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-clipboard"></use>
+              </svg>
+            </span>
+            <span>Ôn thi</span>
+          </a>
+          <a href="summary.html">
+            <span class="icon-shell icon-shell--gold" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-flash"></use>
+              </svg>
+            </span>
+            <span>Ghi nhớ</span>
+          </a>
+          <a href="quiz-full.html">
+            <span class="icon-shell icon-shell--gold" aria-hidden="true">
+              <svg class="ui-icon">
+                <use href="#icon-bulb"></use>
+              </svg>
+            </span>
+            <span>Thi thử toàn bộ</span>
+          </a>
         </nav>
+      </section>
+
+      <section class="section promo-section" id="promo">
+        <div class="section-head">
+          <h2>
+            <span class="section-title">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--orange"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-flash"></use>
+                </svg>
+              </span>
+              <span>Banner nổi bật</span>
+            </span>
+          </h2>
+          <p>
+            Một dải ảnh quảng cáo tự chuyển để giới thiệu nhanh các nhóm tài
+            liệu nổi bật, giúp trang chủ nhìn sinh động hơn mà vẫn gọn.
+          </p>
+        </div>
+        <div class="promo-slider" data-promo-slider data-interval="3000">
+          <div class="promo-stage" aria-live="polite">
+            <article
+              class="promo-slide promo-slide--amber is-active"
+              data-promo-slide
+              aria-hidden="false"
+              style="--promo-position: center 34%"
+            >
+              <img
+                src="assets/promo-student-study.jpg"
+                alt="Ảnh sinh viên đang học với laptop trong giảng đường"
+                width="1600"
+                height="900"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              />
+              <div class="promo-copy">
+                <span class="promo-kicker">Học tập trung</span>
+                <h3>Bộ tài liệu Tin 12 gọn, rõ và dễ ôn hơn</h3>
+                <p>
+                  Gom các phần HTML, CSS, JavaScript, SQL và Mạng vào cùng một
+                  nơi để xem nhanh khi học trên lớp hoặc ôn lại trước kiểm tra.
+                </p>
+                <a class="promo-link" href="informatics.html">Xem trọng tâm</a>
+              </div>
+            </article>
+
+            <article
+              class="promo-slide promo-slide--blue"
+              data-promo-slide
+              aria-hidden="true"
+              style="--promo-position: center 60%"
+            >
+              <img
+                src="assets/promo-web-design.jpg"
+                alt="Ảnh laptop đang mở giao diện web design"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="promo-copy">
+                <span class="promo-kicker">Thiết kế web</span>
+                <h3>HTML, CSS và responsive trong một mạch học</h3>
+                <p>
+                  Từ cấu trúc trang, semantic tags đến màu sắc, Flexbox và Grid
+                  đều được tóm theo cách dễ chép, dễ nhớ và dễ áp dụng.
+                </p>
+                <a class="promo-link" href="css-advanced.html">Mở phần web</a>
+              </div>
+            </article>
+
+            <article
+              class="promo-slide promo-slide--gold"
+              data-promo-slide
+              aria-hidden="true"
+              style="--promo-position: center 42%"
+            >
+              <img
+                src="assets/promo-js-code.jpg"
+                alt="Ảnh tay đang gõ code trên laptop"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="promo-copy">
+                <span class="promo-kicker">Có ví dụ thực hành</span>
+                <h3>JavaScript cơ bản kèm DOM và sự kiện</h3>
+                <p>
+                  Học biến, điều kiện, vòng lặp và thao tác với giao diện bằng
+                  các ví dụ ngắn để nhìn thấy kết quả ngay trên trình duyệt.
+                </p>
+                <a class="promo-link" href="javascript-basics.html">Xem JS</a>
+              </div>
+            </article>
+
+            <article
+              class="promo-slide promo-slide--emerald"
+              data-promo-slide
+              aria-hidden="true"
+              style="--promo-position: center 48%"
+            >
+              <img
+                src="assets/promo-js-code.jpg"
+                alt="Ảnh laptop đang mở cửa sổ lập trình với các dòng mã lệnh"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="promo-copy">
+                <span class="promo-kicker">Làm quen lập trình</span>
+                <h3>Python cơ bản với cú pháp gọn, dễ học và dễ nhớ</h3>
+                <p>
+                  Bổ sung thêm phần Python để luyện nhập xuất dữ liệu, điều
+                  kiện, vòng lặp, danh sách và hàm bằng các ví dụ nền tảng.
+                </p>
+                <a class="promo-link" href="python-basics.html">Xem Python</a>
+              </div>
+            </article>
+
+            <article
+              class="promo-slide promo-slide--emerald"
+              data-promo-slide
+              aria-hidden="true"
+              style="--promo-position: center 50%"
+            >
+              <img
+                src="assets/promo-network-server.jpg"
+                alt="Ảnh hệ thống máy chủ trong trung tâm dữ liệu"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="promo-copy">
+                <span class="promo-kicker">Tổng hợp 2 phần dễ ra thi</span>
+                <h3>SQL, Database và Mạng máy tính trong cùng bộ ôn</h3>
+                <p>
+                  Gộp kiến thức truy vấn dữ liệu và giao thức mạng vào một cụm
+                  tóm tắt ngắn gọn, thuận tiện để xem lại trước khi kiểm tra.
+                </p>
+                <a class="promo-link" href="sql-database.html">Mở tài liệu</a>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section class="section" id="overview">
         <div class="section-head">
-          <h2>📚 10 Chương học - Nội dung đầy đủ</h2>
+          <h2>
+            <span class="section-title">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--teal"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-stack"></use>
+                </svg>
+              </span>
+              <span>11 Chương học - Nội dung đầy đủ</span>
+            </span>
+          </h2>
           <p>
-            Chọn một chương để bắt đầu. Mỗi trang có bảng tra cứu chi tiết, ví dụ thực tế,
-            và được bố trí để dễ học trên điện thoại.
+            Chọn một chương để bắt đầu. Mỗi trang có bảng tra cứu chi tiết, ví
+            dụ thực tế, và được bố trí để dễ học trên điện thoại.
           </p>
         </div>
         <div class="grid">
           <article class="card">
-            <h3>📝 1. Thẻ HTML Cơ bản</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--amber"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-html"></use>
+                  </svg>
+                </span>
+                <span>1. Thẻ HTML Cơ bản</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> 40+ thẻ HTML từ h1-h6, p, div, a, img, form, table, list...</div>
-              <div><strong>Bao gồm:</strong> Cú pháp, công dụng, ví dụ hiển thị trực quan</div>
-              <div><a href="html-tags.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> 40+ thẻ HTML từ h1-h6, p, div, a, img,
+                form, table, list...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Cú pháp, công dụng, ví dụ hiển thị
+                trực quan
+              </div>
+              <div class="action-row">
+                <a href="html-tags.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-html-tags.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>📄 2. HTML Nâng cao & Semantic</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--sky"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-layout"></use>
+                  </svg>
+                </span>
+                <span>2. HTML Nâng cao &amp; Semantic</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Semantic tags (header, nav, section, article, footer), div/span, form nâng cao...</div>
-              <div><strong>Bao gồm:</strong> Meta tags, input types, block vs inline, data attributes</div>
-              <div><a href="html-advanced.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> Semantic tags (header, nav, section,
+                article, footer), div/span, form nâng cao...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Meta tags, input types, block vs
+                inline, data attributes
+              </div>
+              <div class="action-row">
+                <a href="html-advanced.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-html-advanced.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>🎨 3. CSS Cơ bản - Màu & Bố cục</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--teal"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-palette"></use>
+                  </svg>
+                </span>
+                <span>3. CSS Cơ bản - Màu &amp; Bố cục</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Color, font, padding, margin, border, width, height, text-align...</div>
-              <div><strong>Bao gồm:</strong> 20+ thuộc tính CSS thường dùng, ví dụ bảng màu</div>
-              <div><a href="css-layout.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> Color, font, padding, margin, border,
+                width, height, text-align...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> 20+ thuộc tính CSS thường dùng, ví dụ
+                bảng màu
+              </div>
+              <div class="action-row">
+                <a href="css-layout.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-css-layout.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>✨ 4. CSS Nâng cao - Flexbox, Grid, Responsive</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--blue"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-grid"></use>
+                  </svg>
+                </span>
+                <span>4. CSS Nâng cao - Flexbox, Grid, Responsive</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Flexbox, CSS Grid, Selectors, Transform, Transition, Media queries...</div>
-              <div><strong>Bao gồm:</strong> Cách bố trí linh hoạt, responsive design, animation cơ bản</div>
-              <div><a href="css-advanced.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> Flexbox, CSS Grid, Selectors, Transform,
+                Transition, Media queries...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Cách bố trí linh hoạt, responsive
+                design, animation cơ bản
+              </div>
+              <div class="action-row">
+                <a href="css-advanced.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-css-advanced.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>🔧 5. JavaScript Cơ bản</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--gold"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-js"></use>
+                  </svg>
+                </span>
+                <span>5. JavaScript Cơ bản</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Biến, kiểu dữ liệu, toán tử, if/else, loops, hàm...</div>
-              <div><strong>Bao gồm:</strong> DOM API, sự kiện (click, input, change, submit), console.log</div>
-              <div><a href="javascript-basics.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> Biến, kiểu dữ liệu, toán tử, if/else,
+                loops, hàm...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> DOM API, sự kiện (click, input,
+                change, submit), console.log
+              </div>
+              <div class="action-row">
+                <a href="javascript-basics.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-javascript-basics.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>💾 6. SQL & Cơ sở dữ liệu</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--emerald"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-python"></use>
+                  </svg>
+                </span>
+                <span>6. Python Cơ bản</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> SELECT, INSERT, UPDATE, DELETE, WHERE, GROUP BY, ORDER BY...</div>
-              <div><strong>Bao gồm:</strong> Khái niệm table/record/field, ví dụ truy vấn thực tế</div>
-              <div><a href="sql-database.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> <code>print()</code>,
+                <code>input()</code>, biến, kiểu dữ liệu,
+                <code>if/elif/else</code>, <code>for</code>, <code>while</code>,
+                <code>def</code>...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Danh sách, thụt lề, hàm cơ bản và ví
+                dụ nhập xuất dữ liệu
+              </div>
+              <div class="action-row">
+                <a href="python-basics.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-python-basics.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>🌐 7. Mạng máy tính</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--emerald"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-database"></use>
+                  </svg>
+                </span>
+                <span>7. SQL &amp; Cơ sở dữ liệu</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> TCP/IP, HTTP/HTTPS, DNS, SMTP, FTP, Router, LAN/WAN, Firewall...</div>
-              <div><strong>Bao gồm:</strong> Các giao thức mạng, địa chỉ IP, Subnet mask, Gateway</div>
-              <div><a href="network.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> SELECT, INSERT, UPDATE, DELETE, WHERE,
+                GROUP BY, ORDER BY...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Khái niệm table/record/field, ví dụ
+                truy vấn thực tế
+              </div>
+              <div class="action-row">
+                <a href="sql-database.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-sql-database.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>💻 8. Trọng tâm Tin 12</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--cyan"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-network"></use>
+                  </svg>
+                </span>
+                <span>8. Mạng máy tính</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Tóm tắt tất cả khái niệm: Website, Database, Network, An toàn...</div>
-              <div><strong>Bao gồm:</strong> Bảng ghi nhớ, tips học nhanh, ôn theo chủ đề</div>
-              <div><a href="informatics.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> TCP/IP, HTTP/HTTPS, DNS, SMTP, FTP,
+                Router, LAN/WAN, Firewall...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Các giao thức mạng, địa chỉ IP, Subnet
+                mask, Gateway
+              </div>
+              <div class="action-row">
+                <a href="network.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-network.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>📚 9. Ôn thi Tin 12 - Mẫu câu hỏi</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--slate"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-monitor"></use>
+                  </svg>
+                </span>
+                <span>9. Trọng tâm Tin 12</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Cách học nhanh, câu hỏi mẫu thi, phân biệt cặp thẻ dễ nhầm...</div>
-              <div><strong>Bao gồm:</strong> Điểm dễ mất điểm, mẹo làm bài, ôn tập theo chủ đề</div>
-              <div><a href="exam-review.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> Tóm tắt tất cả khái niệm: Website,
+                Database, Network, An toàn...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Bảng ghi nhớ, tips học nhanh, ôn theo
+                chủ đề
+              </div>
+              <div class="action-row">
+                <a href="informatics.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-informatics.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <h3>⚡ 10. Ghi nhớ nhanh - Cheat sheet</h3>
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--orange"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-clipboard"></use>
+                  </svg>
+                </span>
+                <span>10. Ôn thi Tin 12 - Mẫu câu hỏi</span>
+              </span>
+            </h3>
             <div class="mini-list">
-              <div><strong>Học:</strong> Tóm tắt siêu ngắn gọn công thức, thẻ, code snippets cần nhớ</div>
-              <div><strong>Bao gồm:</strong> Khung HTML, form, bảng, mạng - dạng nhanh nhất</div>
-              <div><a href="summary.html">→ Mở</a></div>
+              <div>
+                <strong>Học:</strong> Cách học nhanh, câu hỏi mẫu thi, phân biệt
+                cặp thẻ dễ nhầm...
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Điểm dễ mất điểm, mẹo làm bài, ôn tập
+                theo chủ đề
+              </div>
+              <div class="action-row">
+                <a href="exam-review.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-exam-review.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span class="title-row">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--gold"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-flash"></use>
+                  </svg>
+                </span>
+                <span>11. Ghi nhớ nhanh - Cheat sheet</span>
+              </span>
+            </h3>
+            <div class="mini-list">
+              <div>
+                <strong>Học:</strong> Tóm tắt siêu ngắn gọn công thức, thẻ, code
+                snippets cần nhớ
+              </div>
+              <div>
+                <strong>Bao gồm:</strong> Khung HTML, form, bảng, mạng - dạng
+                nhanh nhất
+              </div>
+              <div class="action-row">
+                <a href="summary.html">Mở bài</a>
+                <a class="button-secondary" href="quiz-summary.html"
+                  >Trắc nghiệm</a
+                >
+              </div>
             </div>
           </article>
         </div>
@@ -137,139 +671,72 @@
 
       <section class="section" id="guide">
         <div class="section-head">
-          <h2>💡 Hướng dẫn sử dụng</h2>
+          <h2>
+            <span class="section-title">
+              <span
+                class="icon-shell icon-shell--sm icon-shell--gold"
+                aria-hidden="true"
+              >
+                <svg class="ui-icon">
+                  <use href="#icon-bulb"></use>
+                </svg>
+              </span>
+              <span>Hướng dẫn sử dụng</span>
+            </span>
+          </h2>
         </div>
         <div class="grid">
           <article class="card">
             <h3>Cho người mới bắt đầu</h3>
             <div class="mini-list">
-              <div>1. Bắt đầu từ "<strong>Thẻ HTML</strong>" để hiểu cấu trúc trang web</div>
+              <div>
+                1. Bắt đầu từ "<strong>Thẻ HTML</strong>" để hiểu cấu trúc trang
+                web
+              </div>
               <div>2. Học "<strong>CSS Cơ bản</strong>" để làm đẹp trang</div>
-              <div>3. Xem "<strong>HTML Nâng cao</strong>" để hiểu semantic</div>
-              <div>4. Tiếp tục các chương khác theo thứ tự</div>
+              <div>
+                3. Xem "<strong>HTML Nâng cao</strong>" để hiểu semantic
+              </div>
+              <div>
+                4. Học "<strong>JavaScript</strong>" và
+                "<strong>Python</strong>" để làm quen lập trình
+              </div>
             </div>
           </article>
 
           <article class="card">
             <h3>Cho người ôn thi</h3>
             <div class="mini-list">
-              <div>1. Mở "<strong>Ôn thi Tin 12</strong>" để xem câu hỏi mẫu</div>
-              <div>2. Dùng "<strong>Ghi nhớ nhanh</strong>" để xem công thức</div>
-              <div>3. Xem chi tiết từng chương khi cần</div>
+              <div>
+                1. Mở "<strong>Ôn thi Tin 12</strong>" để xem câu hỏi mẫu
+              </div>
+              <div>
+                2. Dùng "<strong>Ghi nhớ nhanh</strong>" để xem công thức
+              </div>
+              <div>
+                3. Xem nhanh "<strong>Python</strong>", JS và SQL khi cần
+              </div>
               <div>4. Ôn tập "<strong>Trọng tâm Tin 12</strong>" lần cuối</div>
             </div>
           </article>
 
           <article class="card">
             <h3>Cách sử dụng hiệu quả</h3>
-            <div class="mini-list">
-              <div>✓ Đọc ví dụ và gõ lại code để nhớ hơn</div>
-              <div>✓ Dùng browser F12 để test HTML/CSS/JS</div>
-              <div>✓ Xem bảng tra cứu khi quên syntax</div>
-              <div>✓ Làm bài tập trong phần "Ôn thi"</div>
+            <div class="mini-list mini-list--checks">
+              <div>Đọc ví dụ và gõ lại code để nhớ hơn</div>
+              <div>Gõ lại ví dụ HTML/CSS/JS và Python để nhớ cú pháp</div>
+              <div>Xem bảng tra cứu khi quên syntax</div>
+              <div>Làm bài tập trong phần "Ôn thi"</div>
             </div>
           </article>
         </div>
       </section>
 
       <p class="footer">
-        Tài liệu học Tin 12 đầy đủ - Bạn có thể lưu và mở file này bất cứ lúc nào.
-        Phù hợp cho học sinh lớp 12 học Công Nghệ Thông Tin.
+        Tài liệu học Tin 12 đầy đủ - Bạn có thể lưu và mở file này bất cứ lúc
+        nào. Phù hợp cho học sinh lớp 12 học Công Nghệ Thông Tin.
       </p>
     </main>
     <script src="script.js"></script>
   </body>
 </html>
-<!doctype html>
-<html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài ghi nhớ Tin 12</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <main class="page">    <main class="page">
-      <section class="hero">
-        <span class="badge">Tài liệu học thuộc Tin 12</span>
-        <h1>Tổng hợp nhanh các phần ôn tập</h1>
-        <p>
-          Mỗi phần trong menu dưới đây đã được tách ra thành trang riêng để bạn
-          học gọn, dễ truy cập và không bị rối khi xem trên điện thoại.
-        </p>
-        <div class="note">
-          Chọn một mục để mở trang riêng: Thẻ HTML, CSS, Mạng, Trọng tâm Tin 12,
-          Ôn thi Tin 12 hoặc Ghi nhớ nhanh.
-        </div>
-        <nav class="quick-links">
-          <a href="html-tags.html">📝 Thẻ HTML</a>
-          <a href="css-layout.html">🎨 Màu & CSS</a>
-          <a href="network.html">🌐 Mạng</a>
-          <a href="informatics.html">💻 Tin 12</a>
-          <a href="exam-review.html">📚 Ôn thi</a>
-          <a href="summary.html">⚡ Ghi nhớ</a>
-        </nav>
-      </section>
-
-      <section class="section" id="overview">
-        <div class="section-head">
-          <h2>Chọn học nhanh</h2>
-          <p>
-            Các trang đã được chia nhỏ để ôn tập từng nội dung, giảm rối mắt khi học
-            và thuận tiện mở trên điện thoại.
-          </p>
-        </div>
-        <div class="grid">
-          <article class="card">
-            <h3>📝 Thẻ HTML</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Cú pháp thẻ và ví dụ trực quan.</div>
-              <div><a href="html-tags.html">→ Mở thẻ</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>🎨 Màu & CSS</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Thuộc tính màu, bố cục và hiển thị.</div>
-              <div><a href="css-layout.html">→ Mở CSS</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>🌐 Mạng</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Khái niệm TCP/IP, DNS, LAN/WAN, firewall.</div>
-              <div><a href="network.html">→ Mở Mạng</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>💻 Trọng tâm Tin 12</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Cơ sở dữ liệu, lập trình, an toàn thông tin.</div>
-              <div><a href="informatics.html">→ Mở Tin 12</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>📚 Ôn thi Tin 12</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Tips, câu hỏi mẫu và điểm cần chú ý.</div>
-              <div><a href="exam-review.html">→ Mở Ôn thi</a></div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>⚡ Ghi nhớ nhanh</h3>
-            <div class="mini-list">
-              <div><strong>Học:</strong> Tóm tắt các nhóm thẻ, CSS và mạng.</div>
-              <div><a href="summary.html">→ Mở Ghi nhớ</a></div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <p class="footer">
-        Tài liệu học nhanh Tin 12 - bạn có thể mở file này trên trình duyệt để
-        ôn tập bất cứ lúc nào.
-      </p>
-    </main>    <script src="script.js"></script>
-  </body>
-</html>
-
