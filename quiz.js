@@ -362,6 +362,19 @@ const QUIZ_BANK = {
           "<code>border</code> tạo viền xung quanh phần tử, có thể kết hợp với độ dày, kiểu và màu sắc.",
       },
       {
+        prompt:
+          "Đoạn mã CSS nào sau đây thiết lập đường viền dày 5px và kiểu nét liền mảnh bao quanh phần tử?",
+        options: [
+          "<code>p.border { border-width: 5px; border-style: dashed; }</code>",
+          "<code>p { border-width: 5px; border-style: solid; }</code>",
+          "<code>p.border { border-width: 5px; border-style: groove; }</code>",
+          "<code>p { border-width: 5px; border-style: double; }</code>",
+        ],
+        answer: 1,
+        explain:
+          "<code>border-style: solid</code> tạo đường viền liền, và <code>border-width: 5px</code> xác định độ dày 5 pixel.",
+      },
+      {
         prompt: "Phần tử nào là kiểu inline (nằm trong dòng)?",
         options: [
           "<code>&lt;p&gt;</code>",
@@ -704,11 +717,11 @@ const QUIZ_BANK = {
           "<code>addItem()</code>",
         ],
         answer: 2,
-        explain:
-          "<code>append()</code> thêm một phần tử vào cuối danh sách.",
+        explain: "<code>append()</code> thêm một phần tử vào cuối danh sách.",
       },
       {
-        prompt: "Trong Python, cấu trúc điều kiện thường bắt đầu bằng từ khóa nào?",
+        prompt:
+          "Trong Python, cấu trúc điều kiện thường bắt đầu bằng từ khóa nào?",
         options: [
           "<code>check</code>",
           "<code>switch</code>",
@@ -720,7 +733,8 @@ const QUIZ_BANK = {
           "<code>if</code> là từ khóa dùng để kiểm tra điều kiện trong Python.",
       },
       {
-        prompt: "Sau câu lệnh <code>if</code>, <code>for</code> hoặc <code>def</code> trong Python cần có gì?",
+        prompt:
+          "Sau câu lệnh <code>if</code>, <code>for</code> hoặc <code>def</code> trong Python cần có gì?",
         options: [
           "Dấu chấm phẩy <code>;</code>",
           "Dấu hai chấm <code>:</code>",
@@ -752,8 +766,7 @@ const QUIZ_BANK = {
           "<code>def</code>",
         ],
         answer: 3,
-        explain:
-          "<code>def</code> mở đầu cho phần khai báo hàm trong Python.",
+        explain: "<code>def</code> mở đầu cho phần khai báo hàm trong Python.",
       },
       {
         prompt: "Điều gì rất quan trọng để Python hiểu đúng khối lệnh?",
@@ -903,7 +916,7 @@ const QUIZ_BANK = {
   network: {
     title: "Trắc nghiệm Mạng máy tính",
     description:
-      "Ôn lại các khái niệm như DNS, HTTP/HTTPS, LAN, router, firewall và địa chỉ IP.",
+      "Ôn lại các khái niệm như DNS, HTTP/HTTPS, LAN, router, firewall, switch và địa chỉ IP.",
     iconId: "icon-network",
     iconClass: "icon-shell--cyan",
     lessonUrl: "network.html",
@@ -1018,6 +1031,78 @@ const QUIZ_BANK = {
         ],
         answer: 1,
         explain: "Bit là đơn vị cơ bản (0 hoặc 1); 8 bit = 1 byte.",
+      },
+      {
+        prompt: "Switch khác với Hub ở điểm nào quan trọng?",
+        options: [
+          "Switch chỉ dùng cho Wi-Fi",
+          "Switch chuyển tiếp dữ liệu đến đúng thiết bị đích",
+          "Hub có thể kết nối Internet",
+          "Switch chỉ dùng trong WAN",
+        ],
+        answer: 1,
+        explain:
+          "Switch thông minh hơn Hub vì nó chuyển tiếp dữ liệu đến đúng thiết bị dựa trên địa chỉ MAC, không broadcast như Hub.",
+      },
+      {
+        prompt: "Địa chỉ MAC dùng để:",
+        options: [
+          "Xác định vị trí địa lý",
+          "Nhận diện card mạng vật lý",
+          "Đặt tên miền website",
+          "Tạo mật khẩu Wi-Fi",
+        ],
+        answer: 1,
+        explain:
+          "MAC address là địa chỉ duy nhất của card mạng, dùng ở tầng liên kết dữ liệu.",
+      },
+      {
+        prompt: "Access Point (AP) thường dùng để:",
+        options: [
+          "Kết nối mạng có dây với không dây",
+          "Chỉ kết nối hai máy tính",
+          "Thay thế router hoàn toàn",
+          "Chỉ dùng cho Bluetooth",
+        ],
+        answer: 0,
+        explain:
+          "Access Point mở rộng phạm vi Wi-Fi, cho phép thiết bị không dây kết nối vào mạng có dây.",
+      },
+      {
+        prompt: "VPN thường được dùng để:",
+        options: [
+          "Tăng tốc độ mạng",
+          "Tạo kết nối bảo mật qua mạng công cộng",
+          "Thay thế firewall",
+          "Chỉ dùng trong LAN",
+        ],
+        answer: 1,
+        explain:
+          "VPN tạo đường hầm bảo mật, mã hóa dữ liệu khi truyền qua mạng không an toàn.",
+      },
+      {
+        prompt: "DHCP server có chức năng gì?",
+        options: [
+          "Cấp phát địa chỉ IP tự động",
+          "Chuyển đổi tên miền",
+          "Mã hóa dữ liệu",
+          "Kiểm soát firewall",
+        ],
+        answer: 0,
+        explain:
+          "DHCP tự động cấp phát địa chỉ IP, subnet mask và gateway cho thiết bị mới kết nối mạng.",
+      },
+      {
+        prompt: "Trong mạng, latency là gì?",
+        options: [
+          "Tốc độ tải file",
+          "Độ trễ phản hồi của mạng",
+          "Số lượng thiết bị kết nối",
+          "Độ bảo mật của firewall",
+        ],
+        answer: 1,
+        explain:
+          "Latency là thời gian trễ từ khi gửi yêu cầu đến khi nhận phản hồi, thường đo bằng ms.",
       },
     ],
   },

@@ -460,10 +460,527 @@ function renderFullQuiz(container) {
   startNextQuiz();
 }
 
+const LESSONS = [
+  {
+    id: "html-tags",
+    title: "Thẻ HTML Cơ bản",
+    type: "lesson",
+    url: "html-tags.html",
+    icon: "📄",
+    keywords: ["html", "tag", "thẻ", "cơ bản"],
+  },
+  {
+    id: "html-advanced",
+    title: "HTML Nâng cao",
+    type: "lesson",
+    url: "html-advanced.html",
+    icon: "📄",
+    keywords: ["html", "semantic", "nâng cao", "accessibility"],
+  },
+  {
+    id: "css-layout",
+    title: "CSS Cơ bản",
+    type: "lesson",
+    url: "css-layout.html",
+    icon: "🎨",
+    keywords: ["css", "color", "padding", "margin", "cơ bản"],
+  },
+  {
+    id: "css-advanced",
+    title: "CSS Nâng cao",
+    type: "lesson",
+    url: "css-advanced.html",
+    icon: "🎨",
+    keywords: ["css", "flexbox", "grid", "nâng cao", "responsive"],
+  },
+  {
+    id: "javascript-basics",
+    title: "JavaScript Cơ bản",
+    type: "lesson",
+    url: "javascript-basics.html",
+    icon: "⚙️",
+    keywords: ["javascript", "js", "biến", "hàm", "dom"],
+  },
+  {
+    id: "python-basics",
+    title: "Python Cơ bản",
+    type: "lesson",
+    url: "python-basics.html",
+    icon: "🐍",
+    keywords: ["python", "print", "input", "vòng lặp"],
+  },
+  {
+    id: "sql-database",
+    title: "SQL & Database",
+    type: "lesson",
+    url: "sql-database.html",
+    icon: "💾",
+    keywords: ["sql", "database", "select", "insert", "query"],
+  },
+  {
+    id: "network",
+    title: "Mạng máy tính",
+    type: "lesson",
+    url: "network.html",
+    icon: "🌐",
+    keywords: [
+      "network",
+      "mạng",
+      "dns",
+      "http",
+      "tcp",
+      "ip",
+      "switch",
+      "router",
+    ],
+  },
+  {
+    id: "informatics",
+    title: "Kiến thức Tin 12 trọng tâm",
+    type: "lesson",
+    url: "informatics.html",
+    icon: "💡",
+    keywords: ["tin", "website", "url", "hosting"],
+  },
+  {
+    id: "exam-review",
+    title: "Ôn thi Tin 12",
+    type: "lesson",
+    url: "exam-review.html",
+    icon: "📝",
+    keywords: ["ôn thi", "exam", "review"],
+  },
+  {
+    id: "summary",
+    title: "Ghi nhớ nhanh",
+    type: "lesson",
+    url: "summary.html",
+    icon: "⭐",
+    keywords: ["ghi nhớ", "summary", "tóm tắt"],
+  },
+];
+
+const AI_RESPONSES = [
+  {
+    terms: [
+      "html",
+      "the",
+      "tag",
+      "a",
+      "div",
+      "span",
+      "form",
+      "input",
+      "button",
+    ],
+    answer:
+      "HTML là ngôn ngữ đánh dấu để tạo cấu trúc trang web. Các thẻ như <p>, <a>, <img>, <div>, <span>, <form> giúp bạn tổ chức nội dung và liên kết trang.",
+    link: "html-tags.html",
+  },
+  {
+    terms: [
+      "semantic",
+      "semantic tags",
+      "header",
+      "footer",
+      "section",
+      "article",
+      "nav",
+      "aside",
+    ],
+    answer:
+      "Thẻ semantic như <header>, <nav>, <section>, <article>, <footer> giúp cấu trúc nội dung rõ ràng hơn cho người đọc và công cụ tìm kiếm.",
+    link: "html-advanced.html",
+  },
+  {
+    terms: [
+      "css",
+      "margin",
+      "padding",
+      "border",
+      "color",
+      "font",
+      "display",
+      "width",
+      "height",
+    ],
+    answer:
+      "CSS giúp tạo kiểu cho trang web. Margin tạo khoảng cách ngoài, padding tạo khoảng cách bên trong, còn border là viền quanh phần tử.",
+    link: "css-layout.html",
+  },
+  {
+    terms: [
+      "flex",
+      "grid",
+      "responsive",
+      "align-items",
+      "justify-content",
+      "grid-template",
+    ],
+    answer:
+      "Flexbox và Grid là hai cách mạnh để xếp bố cục. Dùng display: flex khi cần hàng/cột đơn giản và display: grid khi cần lưới phức tạp.",
+    link: "css-advanced.html",
+  },
+  {
+    terms: [
+      "javascript",
+      "js",
+      "bien",
+      "ham",
+      "function",
+      "vong lap",
+      "if",
+      "else",
+      "event",
+      "dom",
+      "addEventListener",
+    ],
+    answer:
+      "JavaScript dùng để tạo tương tác: khai báo biến với let/const, viết hàm bằng function hoặc =>, dùng if/else để quyết định và addEventListener để lắng nghe sự kiện.",
+    link: "javascript-basics.html",
+  },
+  {
+    terms: [
+      "python",
+      "input",
+      "print",
+      "vong lap",
+      "list",
+      "ham",
+      "ifelif",
+      "elif",
+      "while",
+      "for",
+    ],
+    answer:
+      "Python dùng cú pháp thụt lề để phân chia khối lệnh. Dùng print() để in, input() để nhập, if/elif/else cho điều kiện và for/while cho vòng lặp.",
+    link: "python-basics.html",
+  },
+  {
+    terms: [
+      "sql",
+      "select",
+      "from",
+      "where",
+      "insert",
+      "update",
+      "delete",
+      "join",
+      "group by",
+      "order by",
+    ],
+    answer:
+      "SQL dùng SELECT ... FROM ... WHERE ... để truy vấn dữ liệu. INSERT thêm hàng, UPDATE sửa, DELETE xóa và JOIN nối bảng.",
+    link: "sql-database.html",
+  },
+  {
+    terms: [
+      "mang",
+      "network",
+      "ip",
+      "tcp",
+      "http",
+      "https",
+      "dns",
+      "router",
+      "switch",
+      "url",
+      "port",
+    ],
+    answer:
+      "Mạng máy tính dùng địa chỉ IP để nhận diện, DNS để dịch tên miền thành IP, và HTTP/HTTPS để truyền nội dung web. Router và switch giúp điều phối đường truyền.",
+    link: "network.html",
+  },
+  {
+    terms: ["on thi", "thi", "cau hoi", "on tap", "review"],
+    answer:
+      "Đây là trợ lý AI hẹp: chỉ trả lời nhanh nội dung trực tiếp trong app. Nếu cần ôn thi, mở phần 'Ôn thi Tin 12' hoặc 'Ghi nhớ nhanh'.",
+    link: "exam-review.html",
+  },
+];
+
+const AI_PATTERNS = [
+  {
+    regex:
+      /margin.*padding|padding.*margin|margin khac padding|padding khac margin|margin vs padding|khac nhau gi/,
+    answer:
+      "Margin tạo khoảng cách ngoài phần tử còn padding tạo khoảng cách bên trong. Nhớ là margin nằm ngoài border, padding nằm giữa content và border.",
+    link: "css-layout.html",
+  },
+  {
+    regex:
+      /div.*span|span.*div|div vs span|phan biet div span|span.*div|div.*span/,
+    answer:
+      "<div> là thẻ khối để nhóm các phần tử, <span> là thẻ nội dòng dùng cho văn bản hoặc thay đổi kiểu nhỏ. Dùng div cho layout, span cho nội dung bên trong.",
+    link: "html-tags.html",
+  },
+  {
+    regex: /the a|link.*html|anchor|a .* dung|href|dang link|lien ket/,
+    answer:
+      "Thẻ <a> tạo liên kết. Thuộc tính href cho đường dẫn đến trang khác hoặc phần tử khác trên cùng trang.",
+    link: "html-tags.html",
+  },
+  {
+    regex: /form|input type|submit|button|action|method|gui du lieu/,
+    answer:
+      "Form HTML dùng để gửi dữ liệu. Các thẻ input, select, button nằm trong form, action định URL nhận dữ liệu và method chỉ kiểu gửi.",
+    link: "html-tags.html",
+  },
+  {
+    regex:
+      /javascript.*dom|dom.*javascript|event.*dom|su kien|addeventlistener|queryselector|document\.|window\./,
+    answer:
+      "DOM là cách JavaScript tương tác với trang web. Dùng document.querySelector() để lấy phần tử, và addEventListener() để lắng nghe sự kiện.",
+    link: "javascript-basics.html",
+  },
+  {
+    regex: /if else|if.*else|else.*if|elif|if\(|else\(|\bif\b/,
+    answer:
+      "If/else dùng kiểm tra điều kiện trong JavaScript và Python. Nếu điều kiện đúng thì thực hiện if, nếu sai thì thực hiện else.",
+    link: "javascript-basics.html",
+  },
+  {
+    regex: /for .* loop|while .* loop|vong lap|for\(|while\(|for\b|while\b/,
+    answer:
+      "Vòng lặp giúp làm đi làm lại lệnh. For dùng khi biết số lần lặp, while lặp theo điều kiện, cả JavaScript và Python đều hỗ trợ.",
+    link: "python-basics.html",
+  },
+  {
+    regex:
+      /select .* from|from .* where|sql .*select|insert .* into|update .* set|delete .* from|join .* on|group by|order by/,
+    answer:
+      "SQL dùng SELECT để lấy dữ liệu, INSERT thêm, UPDATE sửa, DELETE xóa. WHERE lọc dữ liệu, JOIN nối bảng và ORDER BY sắp xếp.",
+    link: "sql-database.html",
+  },
+  {
+    regex: /ip|dns|http|https|url|router|switch|tcp|udp|port|may chu/,
+    answer:
+      "IP định danh thiết bị, DNS dịch tên miền, HTTP/HTTPS là giao thức web. Router và switch giúp chuyển dữ liệu trong mạng.",
+    link: "network.html",
+  },
+  {
+    regex:
+      /css.*background|background.*css|anh nen|color|font-size|padding|margin|display/,
+    answer:
+      "CSS điều khiển hiển thị: màu, font, padding, margin, display. Dùng background để đặt nền, font-size để cỡ chữ.",
+    link: "css-layout.html",
+  },
+  {
+    regex:
+      /python.*list|list.*python|string.*python|chuoi.*python|ham.*python|function.*python/,
+    answer:
+      "Python có kiểu dữ liệu list để chứa nhiều giá trị, string để chứa chuỗi. Dùng vòng lặp và hàm để xử lý dữ liệu.",
+    link: "python-basics.html",
+  },
+];
+
+function normalizeText(text) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\u0111/g, "d")
+    .replace(/\u0110/g, "d");
+}
+
+function getAiAnswer(query) {
+  if (!query || !query.trim()) {
+    return {
+      text: "Hãy đặt câu hỏi đơn giản về HTML, CSS, JavaScript, Python, SQL hoặc Mạng.",
+    };
+  }
+
+  const normalized = normalizeText(query);
+
+  const patternMatch = AI_PATTERNS.find((item) => item.regex.test(normalized));
+  if (patternMatch) {
+    return {
+      text: `${patternMatch.answer} Xem thêm: ${patternMatch.link}`,
+      link: patternMatch.link,
+    };
+  }
+
+  const scored = AI_RESPONSES.map((item) => {
+    const score = item.terms.reduce(
+      (sum, term) => sum + (normalized.includes(term) ? 1 : 0),
+      0,
+    );
+    return { item, score };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  if (scored[0] && scored[0].score > 0) {
+    return {
+      text: `${scored[0].item.answer} Xem thêm: ${scored[0].item.link}`,
+      link: scored[0].item.link,
+    };
+  }
+
+  if (/html/.test(normalized)) {
+    return {
+      text: "HTML dùng thẻ để cấu trúc nội dung trang web. Bạn có thể mở phần 'Thẻ HTML Cơ bản' để xem ví dụ và cú pháp.",
+      link: "html-tags.html",
+    };
+  }
+
+  if (/css/.test(normalized)) {
+    return {
+      text: "CSS dùng để định dạng giao diện: màu, lề, padding, bố cục. Mở phần CSS Cơ bản hoặc CSS Nâng cao để xem ví dụ.",
+      link: "css-layout.html",
+    };
+  }
+
+  if (/python|py/.test(normalized)) {
+    return {
+      text: "Python dùng cú pháp dễ đọc và thụt lề. Dùng print() để in, input() để nhập, vòng lặp for/while để lặp.",
+      link: "python-basics.html",
+    };
+  }
+
+  if (/sql/.test(normalized)) {
+    return {
+      text: "SQL dùng SELECT ... FROM ... WHERE ... để truy vấn dữ liệu. Mở phần SQL & Database để xem thêm câu ví dụ.",
+      link: "sql-database.html",
+    };
+  }
+
+  if (/mang|network|ip|dns|http|https/.test(normalized)) {
+    return {
+      text: "Mạng máy tính dùng địa chỉ IP, DNS và HTTP để truy cập web. Mở phần Mạng máy tính để ôn lại các khái niệm này.",
+      link: "network.html",
+    };
+  }
+
+  return {
+    text: "Mình chưa hiểu câu hỏi này rõ. Hãy hỏi lại bằng từ khóa đơn giản như HTML, CSS, JavaScript, Python, SQL hoặc Mạng.",
+  };
+}
+
+function renderAiResponse() {
+  const questionInput = document.getElementById("ai-question-input");
+  const answerBox = document.getElementById("ai-answer");
+  if (!questionInput || !answerBox) {
+    return;
+  }
+
+  const response = getAiAnswer(questionInput.value);
+  const linkHtml = response.link
+    ? `<p class="ai-answer-link"><a href="${response.link}">Xem thêm bài học liên quan</a></p>`
+    : "";
+
+  answerBox.innerHTML = `<p>${response.text}</p>${linkHtml}`;
+}
+
+function initializeSearch() {
+  const searchInput = document.getElementById("search-input");
+  const searchResults = document.getElementById("search-results");
+
+  if (!searchInput || !searchResults) {
+    return;
+  }
+
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase().trim();
+
+    if (query.length < 2) {
+      searchResults.classList.remove("active");
+      return;
+    }
+
+    const results = [];
+
+    // Tìm kiếm trong bài học
+    LESSONS.forEach((lesson) => {
+      const titleMatch = lesson.title.toLowerCase().includes(query);
+      const keywordMatch = lesson.keywords.some((kw) =>
+        kw.toLowerCase().includes(query),
+      );
+
+      if (titleMatch || keywordMatch) {
+        results.push(lesson);
+      }
+    });
+
+    // Tìm kiếm trong quiz
+    if (typeof QUIZ_BANK !== "undefined") {
+      Object.entries(QUIZ_BANK).forEach(([quizId, quizData]) => {
+        if (!quizData || quizId === "full-quiz") return;
+
+        const titleMatch = quizData.title.toLowerCase().includes(query);
+        const descMatch =
+          quizData.description &&
+          quizData.description.toLowerCase().includes(query);
+
+        if (titleMatch || descMatch) {
+          results.push({
+            id: quizId,
+            title: quizData.title,
+            type: "quiz",
+            url: `quiz-${quizId}.html`,
+            icon: "❓",
+          });
+        }
+
+        // Tìm kiếm trong câu hỏi
+        if (quizData.questions) {
+          quizData.questions.forEach((q, idx) => {
+            if (q.prompt.toLowerCase().includes(query)) {
+              results.push({
+                id: `${quizId}-q${idx}`,
+                title: `${quizData.title} - Câu ${idx + 1}`,
+                type: "question",
+                url: `quiz-${quizId}.html`,
+                icon: "❓",
+              });
+            }
+          });
+        }
+      });
+    }
+
+    // Hiển thị kết quả
+    if (results.length === 0) {
+      searchResults.innerHTML =
+        '<div class="search-empty">Không tìm thấy kết quả nào phù hợp.</div>';
+    } else {
+      searchResults.innerHTML = results
+        .slice(0, 12)
+        .map(
+          (result) => `
+        <a href="${result.url}" class="search-result-item">
+          <span class="search-result-icon">${result.icon}</span>
+          <div class="search-result-content">
+            <span class="search-result-title">${result.title}</span>
+            <span class="search-result-desc">${
+              result.type === "lesson"
+                ? "Bài học"
+                : result.type === "quiz"
+                  ? "Trắc nghiệm"
+                  : "Câu hỏi"
+            }</span>
+          </div>
+        </a>
+      `,
+        )
+        .join("");
+    }
+
+    searchResults.classList.add("active");
+  });
+
+  // Đóng kết quả khi click ra ngoài
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".search-section")) {
+      searchResults.classList.remove("active");
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   injectIconSprite();
   initializePromoSliders();
   initializeQuizPage();
+  initializeSearch();
 
   const demoInput = document.getElementById("example-input");
   if (demoInput) {
@@ -475,5 +992,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const demoButton = document.getElementById("demo-button");
   if (demoButton) {
     demoButton.addEventListener("click", showAlert);
+  }
+
+  const aiSubmit = document.getElementById("ai-question-submit");
+  const aiInput = document.getElementById("ai-question-input");
+  if (aiSubmit) {
+    aiSubmit.addEventListener("click", renderAiResponse);
+  }
+  if (aiInput) {
+    aiInput.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        renderAiResponse();
+      }
+    });
   }
 });

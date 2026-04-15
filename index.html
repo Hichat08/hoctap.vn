@@ -41,6 +41,65 @@
             CSS Nâng cao và HTML Semantic Tags để bộ tài liệu đầy đủ hơn.
           </div>
         </div>
+
+        <div class="search-section">
+          <input
+            type="text"
+            id="search-input"
+            class="search-box"
+            placeholder="🔍 Tìm bài học hoặc câu hỏi... (vd: HTML, CSS, Switch, DNS)"
+            aria-label="Tìm kiếm"
+          />
+          <div id="search-results" class="search-results"></div>
+        </div>
+
+        <section class="section ai-section" id="assistant-ai">
+          <div class="section-head">
+            <h2>
+              <span class="section-title">
+                <span
+                  class="icon-shell icon-shell--sm icon-shell--orange"
+                  aria-hidden="true"
+                >
+                  <svg class="ui-icon">
+                    <use href="#icon-flash"></use>
+                  </svg>
+                </span>
+                <span>Trợ lý AI - Hỏi bài nhanh</span>
+              </span>
+            </h2>
+            <p>
+              Nhập câu hỏi đơn giản về HTML, CSS, JavaScript, Python, SQL hoặc
+              Mạng. Trợ lý sẽ trả lời ngay bằng nội dung hẹp trong app.
+            </p>
+          </div>
+          <div class="ai-card">
+            <div class="ai-input-row">
+              <input
+                type="text"
+                id="ai-question-input"
+                class="ai-input"
+                placeholder="VD: CSS margin khác padding thế nào?"
+                aria-label="Hỏi trợ lý AI"
+              />
+              <button
+                id="ai-question-submit"
+                class="btn btn-primary"
+                type="button"
+              >
+                Hỏi AI
+              </button>
+            </div>
+            <div id="ai-answer" class="ai-answer">
+              <p>
+                Hãy hỏi một câu đơn giản về nội dung trong ứng dụng, ví dụ: "Thẻ
+                a dùng để làm gì?", "Python input nhận dữ liệu như thế nào?",
+                "SQL SELECT dùng ra sao?"
+              </p>
+            </div>
+          </div>
+        </section>
+
         <nav class="quick-links">
           <a href="html-tags.html">
             <span class="icon-shell icon-shell--amber" aria-hidden="true">
@@ -737,6 +796,7 @@
         nào. Phù hợp cho học sinh lớp 12 học Công Nghệ Thông Tin.
       </p>
     </main>
+    <script src="quiz.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -48,105 +48,237 @@
             </a>
           </div>
         </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Thiết bị mạng cơ bản</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Switch:</strong> Thiết bị chuyển mạch mạng, kết nối nhiều
+                thiết bị trong cùng mạng LAN, chuyển tiếp dữ liệu dựa trên địa chỉ MAC.
+              </div>
+              <div>
+                <strong>Router:</strong> Thiết bị định tuyến, kết nối các mạng khác nhau,
+                định tuyến gói tin giữa các mạng dựa trên địa chỉ IP.
+              </div>
+              <div>
+                <strong>Hub:</strong> Thiết bị tập trung, phát dữ liệu đến tất cả các cổng,
+                ít hiệu quả hơn switch (broadcast tất cả).
+              </div>
+              <div>
+                <strong>Modem:</strong> Chuyển đổi tín hiệu số-số tương tự để kết nối Internet
+                qua đường dây điện thoại hoặc cáp quang.
+              </div>
+              <div>
+                <strong>Access Point (AP):</strong> Điểm truy cập Wi-Fi, cho phép thiết bị
+                không dây kết nối vào mạng có dây.
+              </div>
+              <div>
+                <strong>Firewall:</strong> Tường lửa, kiểm soát lưu lượng vào ra mạng,
+                bảo vệ khỏi truy cập trái phép và tấn công.
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Địa chỉ và định danh</h3>
+            <div class="mini-list">
+              <div>
+                <strong>IP Address:</strong> Địa chỉ duy nhất của thiết bị trên mạng,
+                gồm IPv4 (4 số, vd: 192.168.1.1) và IPv6 (dài hơn).
+              </div>
+              <div>
+                <strong>MAC Address:</strong> Địa chỉ vật lý của card mạng,
+                duy nhất cho mỗi thiết bị (vd: 00:1B:44:11:3A:B7).
+              </div>
+              <div>
+                <strong>Subnet Mask:</strong> Xác định phần mạng và phần host của IP
+                (vd: 255.255.255.0 chia mạng thành 254 host).
+              </div>
+              <div>
+                <strong>Gateway/Default Gateway:</strong> Địa chỉ IP của router,
+                điểm ra khỏi mạng nội bộ để đến mạng khác.
+              </div>
+              <div>
+                <strong>DNS Server:</strong> Máy chủ phân giải tên miền thành địa chỉ IP
+                (vd: 8.8.8.8 của Google).
+              </div>
+              <div>
+                <strong>Port:</strong> Cổng logic để ứng dụng giao tiếp
+                (vd: 80 cho HTTP, 443 cho HTTPS, 25 cho SMTP).
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Các loại mạng</h3>
+            <div class="mini-list">
+              <div>
+                <strong>LAN (Local Area Network):</strong> Mạng cục bộ trong phạm vi nhỏ
+                như nhà, văn phòng, trường học.
+              </div>
+              <div>
+                <strong>WAN (Wide Area Network):</strong> Mạng diện rộng kết nối nhiều LAN
+                trên khoảng cách lớn (Internet là WAN lớn nhất).
+              </div>
+              <div>
+                <strong>WLAN (Wireless LAN):</strong> Mạng LAN không dây sử dụng Wi-Fi,
+                kết nối thiết bị qua sóng radio.
+              </div>
+              <div>
+                <strong>MAN (Metropolitan Area Network):</strong> Mạng đô thị,
+                lớn hơn LAN nhưng nhỏ hơn WAN.
+              </div>
+              <div>
+                <strong>PAN (Personal Area Network):</strong> Mạng cá nhân nhỏ
+                như Bluetooth giữa điện thoại và tai nghe.
+              </div>
+              <div>
+                <strong>VPN (Virtual Private Network):</strong> Mạng riêng ảo,
+                tạo kết nối bảo mật qua mạng công cộng.
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Giao thức mạng</h3>
+            <div class="mini-list">
+              <div>
+                <strong>TCP/IP:</strong> Bộ giao thức nền tảng của Internet,
+                TCP đảm bảo dữ liệu đầy đủ và đúng thứ tự, IP định tuyến gói tin.
+              </div>
+              <div>
+                <strong>HTTP/HTTPS:</strong> Giao thức web, HTTPS có mã hóa SSL/TLS
+                để bảo mật dữ liệu truyền tải.
+              </div>
+              <div>
+                <strong>DNS:</strong> Domain Name System, chuyển đổi tên miền
+                dễ nhớ thành địa chỉ IP.
+              </div>
+              <div>
+                <strong>DHCP:</strong> Dynamic Host Configuration Protocol,
+                tự động cấp phát địa chỉ IP cho thiết bị mới.
+              </div>
+              <div>
+                <strong>FTP/SFTP:</strong> File Transfer Protocol, truyền file
+                giữa máy tính và server (SFTP có mã hóa).
+              </div>
+              <div>
+                <strong>SMTP/POP3/IMAP:</strong> Giao thức email -
+                SMTP gửi, POP3/IMAP nhận và quản lý thư.
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Kết nối và truyền dẫn</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Ethernet:</strong> Chuẩn kết nối mạng có dây phổ biến,
+                sử dụng cáp RJ-45 và switch/router.
+              </div>
+              <div>
+                <strong>Wi-Fi:</strong> Kết nối không dây qua sóng radio,
+                sử dụng chuẩn IEEE 802.11 (Wi-Fi 5, Wi-Fi 6).
+              </div>
+              <div>
+                <strong>Bluetooth:</strong> Kết nối ngắn phạm vi cho thiết bị cá nhân,
+                dùng cho tai nghe, bàn phím, chuột.
+              </div>
+              <div>
+                <strong>Fiber Optic:</strong> Truyền dẫn qua cáp quang,
+                tốc độ cao và khoảng cách xa.
+              </div>
+              <div>
+                <strong>5G/4G:</strong> Mạng di động thế hệ mới,
+                tốc độ cao và độ trễ thấp.
+              </div>
+              <div>
+                <strong>SSID:</strong> Service Set Identifier, tên mạng Wi-Fi
+                mà người dùng thấy khi tìm kiếm.
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Bảo mật mạng</h3>
+            <div class="mini-list">
+              <div>
+                <strong>Firewall:</strong> Bộ lọc lưu lượng mạng,
+                chặn truy cập trái phép và tấn công.
+              </div>
+              <div>
+                <strong>Encryption:</strong> Mã hóa dữ liệu,
+                bảo vệ thông tin khi truyền qua mạng (SSL/TLS).
+              </div>
+              <div>
+                <strong>Antivirus:</strong> Phần mềm diệt virus,
+                bảo vệ máy tính khỏi malware qua mạng.
+              </div>
+              <div>
+                <strong>WPA3:</strong> Chuẩn bảo mật Wi-Fi mới nhất,
+                thay thế WPA2 với bảo mật mạnh hơn.
+              </div>
+              <div>
+                <strong>MAC Filtering:</strong> Lọc địa chỉ MAC,
+                chỉ cho phép thiết bị được phép kết nối.
+              </div>
+              <div>
+                <strong>Two-Factor Authentication (2FA):</strong> Xác thực hai yếu tố,
+                tăng bảo mật cho tài khoản và dịch vụ.
+              </div>
+            </div>
+          </article>
+        </div>
+
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Nội dung</th>
-                <th>Từ khóa</th>
-                <th>Ghi nhớ</th>
+                <th>Khái niệm</th>
+                <th>Giải thích ngắn</th>
+                <th>Ví dụ</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Chia sẻ Internet từ điện thoại qua Wi-Fi</td>
-                <td><code>Mobile hotspot</code></td>
-                <td>Bật điểm phát Wi-Fi từ điện thoại.</td>
+                <td>Switch</td>
+                <td>Thiết bị chuyển mạch thông minh, chuyển tiếp dữ liệu đến đúng thiết bị đích dựa trên địa chỉ MAC</td>
+                <td>Switch 8 cổng trong nhà kết nối máy tính, máy in, TV</td>
               </tr>
               <tr>
-                <td>Loại giao thức đặc thù của Internet</td>
-                <td><code>TCP/IP</code></td>
-                <td>Bộ giao thức nền tảng của Internet.</td>
+                <td>Router</td>
+                <td>Thiết bị định tuyến, kết nối nhiều mạng và định tuyến gói tin dựa trên địa chỉ IP</td>
+                <td>Router nhà cung cấp Internet, kết nối mạng gia đình với Internet</td>
               </tr>
               <tr>
-                <td>Đảm bảo dữ liệu đầy đủ, đúng thứ tự</td>
-                <td><code>TCP</code></td>
-                <td>Có cơ chế kiểm tra và sắp xếp gói tin.</td>
+                <td>Bridge</td>
+                <td>Kết nối hai mạng khác nhau, hoạt động ở tầng liên kết dữ liệu</td>
+                <td>Kết nối hai switch hoặc hai mạng LAN khác nhau</td>
               </tr>
               <tr>
-                <td>Định tuyến gói tin giữa các thiết bị</td>
-                <td><code>IP</code></td>
-                <td>Xác định địa chỉ và hướng đi của gói tin.</td>
+                <td>Access Point</td>
+                <td>Điểm truy cập Wi-Fi, mở rộng phạm vi mạng không dây</td>
+                <td>Thiết bị Wi-Fi extender trong nhà lớn</td>
               </tr>
               <tr>
-                <td>Truy cập web</td>
-                <td><code>HTTP</code></td>
-                <td>Giao thức truyền tải trang web.</td>
+                <td>ISP</td>
+                <td>Internet Service Provider - nhà cung cấp dịch vụ Internet</td>
+                <td>Viettel, VNPT, FPT Telecom</td>
               </tr>
               <tr>
-                <td>Phiên bản bảo mật có mã hóa</td>
-                <td><code>HTTPS</code></td>
-                <td>HTTP + SSL/TLS để mã hóa dữ liệu.</td>
+                <td>Bandwidth</td>
+                <td>Băng thông - lượng dữ liệu có thể truyền trong một thời gian</td>
+                <td>100 Mbps, 1 Gbps</td>
               </tr>
               <tr>
-                <td>Gửi email</td>
-                <td><code>SMTP</code></td>
-                <td>Giao thức gửi thư điện tử.</td>
+                <td>Latency</td>
+                <td>Độ trễ - thời gian phản hồi của mạng</td>
+                <td>10ms ping time</td>
               </tr>
               <tr>
-                <td>Nhận email</td>
-                <td><code>POP3 / IMAP</code></td>
-                <td>Giao thức tải và đồng bộ thư điện tử.</td>
-              </tr>
-              <tr>
-                <td>Truyền file giữa máy tính và server</td>
-                <td><code>FTP</code></td>
-                <td>File Transfer Protocol.</td>
-              </tr>
-              <tr>
-                <td>Chuyển đổi tên miền</td>
-                <td><code>DNS</code></td>
-                <td>Đổi tên miền thành địa chỉ IP.</td>
-              </tr>
-              <tr>
-                <td>Thiết bị kết nối và định tuyến mạng</td>
-                <td><code>Router</code></td>
-                <td>Kết nối các mạng và định tuyến dữ liệu giữa chúng.</td>
-              </tr>
-              <tr>
-                <td>Tên hiển thị của mạng Wi-Fi</td>
-                <td><code>SSID</code></td>
-                <td>Tên thường thấy khi tìm và kết nối Wi-Fi.</td>
-              </tr>
-              <tr>
-                <td>Địa chỉ IP</td>
-                <td><code>IP address</code></td>
-                <td>Địa chỉ duy nhất của thiết bị trên mạng.</td>
-              </tr>
-              <tr>
-                <td>Subnet mask</td>
-                <td><code>Subnet mask</code></td>
-                <td>Xác định phần mạng và phần host của IP.</td>
-              </tr>
-              <tr>
-                <td>Cổng mặc định</td>
-                <td><code>Gateway</code></td>
-                <td>Điểm ra khỏi mạng nội bộ.</td>
-              </tr>
-              <tr>
-                <td>Tường lửa</td>
-                <td><code>Firewall</code></td>
-                <td>Bảo vệ mạng khỏi truy cập trái phép.</td>
-              </tr>
-              <tr>
-                <td>Mạng cục bộ</td>
-                <td><code>LAN</code></td>
-                <td>Mạng trong phạm vi nhỏ như nhà hoặc văn phòng.</td>
-              </tr>
-              <tr>
-                <td>Mạng diện rộng</td>
-                <td><code>WAN</code></td>
-                <td>Mạng kết nối nhiều LAN trên diện tích lớn.</td>
+                <td>Packet</td>
+                <td>Gói tin - đơn vị dữ liệu được truyền trên mạng</td>
+                <td>Dữ liệu được chia nhỏ thành các packet để truyền</td>
               </tr>
             </tbody>
           </table>
